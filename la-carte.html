@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Carte — Burgers fait maison à Rouen | M. Patachon</title>
+  <meta name="description" content="La carte M. Patachon : burgers fait maison, le Chirac (poutine revisitée), sides, menu enfant, boissons. Élu meilleur burger de Normandie. Commande en ligne.">
+  <link rel="icon" href="assets/logo-header.png">
+  <link rel="preload" as="image" href="assets/photos/knife-cut.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home ftpage">
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo"><img src="assets/logo-header.png" alt="M. Patachon"></a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link">Accueil</a>
+        <a href="hors-les-murs.html" class="nav__link">Food truck</a>
+        <a href="la-carte.html" class="nav__link is-active">La Carte</a>
+        <div class="lang-switch lang-switch--nav" role="group" aria-label="Langue">
+          <button type="button" class="lang-switch__toggle" data-lang-toggle aria-haspopup="true" aria-expanded="false">
+            <span class="lang-flag" data-lang-flag="fr"></span><span data-lang-code>FR</span>
+            <svg class="lang-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="lang-switch__menu">
+            <button type="button" data-lang-btn="fr" class="is-active"><span class="lang-flag" data-lang-flag="fr"></span>Français</button>
+            <button type="button" data-lang-btn="en"><span class="lang-flag" data-lang-flag="en"></span>English</button>
+            <button type="button" data-lang-btn="es"><span class="lang-flag" data-lang-flag="es"></span>Español</button>
+            <button type="button" data-lang-btn="de"><span class="lang-flag" data-lang-flag="de"></span>Deutsch</button>
+          </div>
+        </div>
+      </nav>
+      <div class="header__cta">
+        <div class="lang-switch lang-switch--head" role="group" aria-label="Langue">
+          <button type="button" class="lang-switch__toggle" data-lang-toggle aria-haspopup="true" aria-expanded="false">
+            <span class="lang-flag" data-lang-flag="fr"></span><span data-lang-code>FR</span>
+            <svg class="lang-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="lang-switch__menu">
+            <button type="button" data-lang-btn="fr" class="is-active"><span class="lang-flag" data-lang-flag="fr"></span>Français</button>
+            <button type="button" data-lang-btn="en"><span class="lang-flag" data-lang-flag="en"></span>English</button>
+            <button type="button" data-lang-btn="es"><span class="lang-flag" data-lang-flag="es"></span>Español</button>
+            <button type="button" data-lang-btn="de"><span class="lang-flag" data-lang-flag="de"></span>Deutsch</button>
+          </div>
+        </div>
+        <a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener" class="btn btn--white">Commander</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- ============ HERO ============ -->
+    <section class="ftp-hero">
+      <div class="ftp-hero__bg" style="background-image:url('assets/photos/knife-cut.jpg');background-position:center 58%;"></div>
+      <div class="ftp-hero__inner">
+        <p class="eyebrow">La carte · Élu meilleur burger de Normandie</p>
+        <h1 class="ftp-hero__title ftp-hero__title--xl">La carte</h1>
+        <p class="ftp-hero__sub">
+          Du fait maison, des produits bien choisis, des recettes généreuses — pour les viandards
+          comme pour les végé. Compose ton burger et commande en ligne en 2 minutes.
+        </p>
+        <div class="ftp-hero__cta">
+          <a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener" class="btn btn--white">Commander en ligne <span class="arrow">→</span></a>
+          <a href="#burgers" class="btn btn--outline-white">Voir les burgers</a>
+        </div>
+        <div class="ftp-trustline"><span>100% fait maison</span><span>Pain du boulanger</span><span>Option végé</span></div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ RECETTES DU MOMENT ============ -->
+    <section class="section section--white has-deco">
+      <span class="deco deco--float" data-parallax="0.18" style="width:min(30vw,320px);height:320px;top:-60px;right:-60px;background-image:url('assets/icons/fries.png');"></span>
+      <div class="container">
+        <p class="eyebrow" data-reveal>Édition limitée</p>
+        <h2 class="title-lg" data-reveal style="--i:1;color:var(--marine)">La recette du moment</h2>
+        <article class="momo-feature" data-reveal="zoom">
+          <div class="momo-feature__media">
+            <span class="momo-feature__tag">Nouveau · Édition limitée</span>
+            <img src="assets/photos/recette-moment.jpg" alt="Le Fraîchon — truite fumée, avocat, pickles de radis">
+          </div>
+          <div class="momo-feature__body">
+            <div class="momo-feature__row">
+              <h3 class="momo-feature__name">Le Fraîchon</h3>
+              <span class="momo-feature__price">15 €</span>
+            </div>
+            <p class="momo-feature__desc">
+              Truite fumée fondante, avocat bien crémeux et pickles de radis rose faits maison,
+              réveillés par une sauce fraîche cottage &amp; herbes — ciboulette, menthe, aneth, citron vert
+              et une pointe de piment d'Espelette. Coleslaw qui croque, pain brioché doré.
+              Frais, vif, délicatement canaille : le burger qui te fait de l'œil.
+            </p>
+            <div class="momo-feature__ings">
+              <span>Truite fumée</span><span>Avocat</span><span>Pickles de radis</span>
+              <span>Sauce cottage &amp; herbes</span><span>Citron vert</span><span>Piment d'Espelette</span><span>Coleslaw</span>
+            </div>
+            <a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener" class="btn btn--white">Commander <span class="arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ LES BURGERS ============ -->
+    <section class="section section--marine has-deco" id="burgers">
+      <span class="deco deco--float" data-parallax="-0.16" style="width:min(36vw,420px);height:420px;bottom:-100px;left:-90px;background-image:url('assets/icons/white/burger.png');"></span>
+      <div class="container">
+        <div class="menu-head" data-reveal>
+          <img src="assets/icons/white/burger.png" alt="">
+          <div class="menu-head__t"><h2 class="title-lg">Les burgers</h2><p>Une recette, une protéine au choix</p></div>
+        </div>
+        <div class="menu-grid" data-reveal style="--i:1">
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Le Classique</span><span class="menu-item__dots"></span><span class="menu-item__price">13 €</span></div>
+            <p class="menu-item__desc">Protéine au choix, cheddar, sauce crème, confit d'oignons, pickles de cornichons, salade.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Le Normand</span><span class="menu-item__dots"></span><span class="menu-item__price">13 €</span></div>
+            <p class="menu-item__desc">Protéine au choix, camembert rôti, sauce calvados, pomme cuite, salade.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Le Chèvre-miel</span><span class="menu-item__dots"></span><span class="menu-item__price">13 €</span></div>
+            <p class="menu-item__desc">Protéine au choix, chèvre, noix, sauce miel-moutarde, confit d'oignons, salade.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Le Pestochon</span><span class="menu-item__dots"></span><span class="menu-item__price">15 €</span></div>
+            <p class="menu-item__desc">Protéine au choix, mozzarella, crème de pesto, confit de tomate, oignons et câpres, salade.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Le Patachizo</span><span class="menu-item__dots"></span><span class="menu-item__price">15 €</span></div>
+            <p class="menu-item__desc">Protéine au choix, chèvre, crème de chorizo, chips de chorizo, confit d'oignons, salade.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Le Moment</span><span class="menu-item__dots"></span><span class="menu-item__price">15 €</span></div>
+            <p class="menu-item__desc">La recette éphémère du chef. À découvrir au comptoir (ou en ligne selon la saison).</p>
+          </div>
+        </div>
+
+        <div class="compose" data-reveal style="--i:2">
+          <div class="compose__head">
+            <span class="compose__step">01</span>
+            <h3>Choisis ta protéine</h3>
+            <p>Incluse — même prix, aucun supplément</p>
+          </div>
+          <div class="prots">
+            <div class="prot"><span class="prot__ic"><img src="assets/icons/cocotte.png" alt=""></span><span class="prot__name">Bœuf bourguignon</span><span class="prot__tag">Mijoté maison</span></div>
+            <div class="prot"><span class="prot__ic"><img src="assets/icons/patty.png" alt=""></span><span class="prot__name">Bœuf normand</span><span class="prot__tag">Haché frais</span></div>
+            <div class="prot"><span class="prot__ic"><img src="assets/icons/drumstick.png" alt=""></span><span class="prot__name">Poulet frit</span><span class="prot__tag">Croustillant</span></div>
+            <div class="prot"><span class="prot__ic"><img src="assets/icons/wheat.png" alt=""></span><span class="prot__name">Végétarien</span><span class="prot__tag">HappyVore · 100% végétal</span></div>
+          </div>
+        </div>
+
+        <div class="boost" data-reveal style="--i:3">
+          <div class="boost__head">
+            <span class="compose__step">02</span>
+            <h3>Gonfle ton burger</h3>
+          </div>
+          <div class="boosts">
+            <span class="boost__item">Double viande <b>+3 €</b></span>
+            <span class="boost__item">Double fromage <b>+2 €</b></span>
+            <span class="boost__item">Bacon <b>+2 €</b></span>
+          </div>
+          <div class="menu-up">
+            <span class="menu-up__ic"><img src="assets/icons/friesbox.png" alt=""></span>
+            <span class="menu-up__txt">
+              <span class="menu-up__label">Passe en menu</span>
+              <span class="menu-up__sub">Frites maison + sauce, ou coleslaw</span>
+            </span>
+            <span class="menu-up__price">+3 €</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LE CHIRAC ============ -->
+    <section class="section section--white has-deco">
+      <span class="deco deco--float" data-parallax="0.18" style="width:min(30vw,340px);height:340px;top:-70px;right:-70px;background-image:url('assets/icons/friesbox.png');"></span>
+      <div class="container">
+        <div class="menu-head" data-reveal>
+          <img src="assets/icons/cocotte.png" alt="">
+          <div class="menu-head__t"><h2 class="title-lg" style="color:var(--marine)">Le Chirac</h2><p>Notre poutine revisitée à la française</p></div>
+        </div>
+        <div class="menu-grid" data-reveal style="--i:1">
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Petit joueur</span><span class="menu-item__dots"></span><span class="menu-item__price">13,90 €</span></div>
+            <p class="menu-item__desc">1 protéine + 1 sauce au choix, sur un lit de frites maison.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Vaillant</span><span class="menu-item__dots"></span><span class="menu-item__price">17,50 €</span></div>
+            <p class="menu-item__desc">2 protéines + 2 sauces au choix. Pour les bons vivants.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Affamé</span><span class="menu-item__dots"></span><span class="menu-item__price">21,50 €</span></div>
+            <p class="menu-item__desc">3 protéines + 3 sauces au choix. Le défi ultime.</p>
+          </div>
+        </div>
+        <div class="compose" data-reveal style="--i:2">
+          <div class="compose__head">
+            <span class="compose__step">01</span>
+            <h3>Choisis tes protéines</h3>
+            <p>Selon la taille — 1, 2 ou 3 au choix</p>
+          </div>
+          <div class="prots">
+            <div class="prot"><span class="prot__ic"><img src="assets/icons/white/cocotte.png" alt=""></span><span class="prot__name">Bœuf bourguignon</span><span class="prot__tag">Mijoté maison</span></div>
+            <div class="prot"><span class="prot__ic"><img src="assets/icons/white/drumstick.png" alt=""></span><span class="prot__name">Poulet frit</span><span class="prot__tag">Croustillant</span></div>
+            <div class="prot"><span class="prot__ic"><img src="assets/icons/white/sausage.png" alt=""></span><span class="prot__name">Saucisse de canard</span><span class="prot__tag">Fumée</span></div>
+            <div class="prot"><span class="prot__ic"><img src="assets/icons/white/wheat.png" alt=""></span><span class="prot__name">Végétarien</span><span class="prot__tag">100% végétal</span></div>
+          </div>
+        </div>
+        <div class="opt-block" data-reveal style="--i:3">
+          <h4>Choix de la sauce <span>(servie sur les protéines)</span></h4>
+          <div class="opts">
+            <span class="opt">Cheddar</span><span class="opt">Camembert</span><span class="opt">Roquefort</span>
+            <span class="opt">Poivre</span><span class="opt">Moutarde à l'ancienne</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SIDES ============ -->
+    <section class="section section--marine has-deco">
+      <span class="deco deco--float" data-parallax="-0.14" style="width:min(28vw,320px);height:320px;bottom:-80px;right:-60px;background-image:url('assets/icons/white/drumstick.png');"></span>
+      <div class="container">
+        <div class="menu-head" data-reveal>
+          <img src="assets/icons/white/patty.png" alt="">
+          <div class="menu-head__t"><h2 class="title-lg">Sides</h2><p>À côté ou à partager</p></div>
+        </div>
+        <div class="menu-grid" data-reveal style="--i:1">
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Burger cocotte</span><span class="menu-item__dots"></span><span class="menu-item__price">7,90 €</span></div>
+            <p class="menu-item__desc">Poulet frit maison, cheddar, sauce barbecue, pain brioché.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Frites maison</span><span class="menu-item__dots"></span><span class="menu-item__price">3,50 €</span></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Salade coleslaw</span><span class="menu-item__dots"></span><span class="menu-item__price">3,50 €</span></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Cookie pur beurre</span><span class="menu-item__dots"></span><span class="menu-item__price">2,90 €</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU ENFANT ============ -->
+    <section class="section section--white has-deco">
+      <span class="deco deco--float" data-parallax="0.16" style="width:min(28vw,320px);height:320px;top:-60px;right:-60px;background-image:url('assets/icons/fries.png');"></span>
+      <div class="container">
+        <div class="menu-head" data-reveal>
+          <img src="assets/icons/friesbox.png" alt="">
+          <div class="menu-head__t"><h2 class="title-lg" style="color:var(--marine)">Menu enfant</h2><p>12,90 € · 1 plat au choix + une boisson</p></div>
+        </div>
+        <div class="kids" data-reveal>
+          <div class="kids__opt">
+            <div class="kids__ic"><img src="assets/icons/burger.png" alt=""><span class="kids__plus">+</span><img src="assets/icons/friesbox.png" alt=""></div>
+            <h4>Burger Patatoune + frites</h4>
+            <p>Poulet frit maison, cheddar, ketchup, pain brioché.</p>
+          </div>
+          <div class="kids__or">ou</div>
+          <div class="kids__opt">
+            <div class="kids__ic"><img src="assets/icons/drumstick.png" alt=""><span class="kids__plus">+</span><img src="assets/icons/friesbox.png" alt=""></div>
+            <h4>Poulet frit + frites</h4>
+            <p>Poulet frit maison, servi avec des frites maison.</p>
+          </div>
+        </div>
+        <p class="kids__drink" data-reveal><b>+ Boisson incluse —</b> Sirop à l'eau (20 cl) : menthe, violette, grenadine ou pêche.</p>
+      </div>
+    </section>
+
+    <!-- ============ SAUCES MAISON ============ -->
+    <section class="section section--marine has-deco">
+      <span class="deco deco--float" data-parallax="-0.16" style="width:min(30vw,340px);height:340px;bottom:-90px;left:-70px;background-image:url('assets/icons/white/friesbox.png');"></span>
+      <div class="container">
+        <div class="menu-head" data-reveal>
+          <img src="assets/icons/white/friesbox.png" alt="">
+          <div class="menu-head__t"><h2 class="title-lg">Sauces maison</h2><p>Faites maison, pour tremper tes frites</p></div>
+        </div>
+        <div class="opt-block" data-reveal style="--i:1">
+          <h4>Les classiques</h4>
+          <div class="opts">
+            <span class="opt">Mayonnaise</span><span class="opt">Marocaine</span><span class="opt">Barbecue</span>
+            <span class="opt">Moutarde à l'ancienne</span><span class="opt">Poivre +1 €</span>
+          </div>
+        </div>
+        <div class="opt-block" data-reveal style="--i:2">
+          <h4>Fondue au fromage <span>(à saucer)</span></h4>
+          <div class="opts">
+            <span class="opt">Cheddar +1,50 €</span><span class="opt">Camembert +1,50 €</span><span class="opt">Roquefort +1,50 €</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOISSONS ============ -->
+    <section class="section section--white has-deco">
+      <span class="deco deco--float" data-parallax="0.16" style="width:min(26vw,300px);height:300px;bottom:-70px;right:-50px;background-image:url('assets/icons/cocotte.png');"></span>
+      <div class="container">
+        <div class="menu-head" data-reveal>
+          <img src="assets/icons/cocotte.png" alt="">
+          <div class="menu-head__t"><h2 class="title-lg" style="color:var(--marine)">Boissons</h2><p>Softs maison · bières du brasseur Ragnar · cidre de Normandie</p></div>
+        </div>
+        <div class="menu-grid" data-reveal style="--i:1">
+          <div class="menu-item menu-item--wide" style="border:0;padding-bottom:4px;"><span class="menu-item__name" style="color:var(--marine)">Softs <small>à emporter · 33 cl</small></span></div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Kiss Kiss Mangue</span><span class="menu-item__dots"></span><span class="menu-item__price">4,90 €</span></div>
+            <p class="menu-item__desc">Mangue, citron vert, limonade.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Thé glacé maison</span><span class="menu-item__dots"></span><span class="menu-item__price">3,90 €</span></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Diabolo</span><span class="menu-item__dots"></span><span class="menu-item__price">3,90 €</span></div>
+            <p class="menu-item__desc">Sirop au choix : menthe, violette, grenadine, pêche.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Sirop à l'eau</span><span class="menu-item__dots"></span><span class="menu-item__price">2,50 €</span></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Coca-Cola / Zéro</span><span class="menu-item__dots"></span><span class="menu-item__price">2,90 €</span></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Perrier</span><span class="menu-item__dots"></span><span class="menu-item__price">2,50 €</span></div>
+          </div>
+
+          <div class="menu-item menu-item--wide" style="border:0;padding-bottom:4px;margin-top:18px;"><span class="menu-item__name" style="color:var(--marine)">Bières &amp; cidre <small>brassées par Ragnar</small></span></div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Ragnar Blonde <small>blonde de soif</small></span><span class="menu-item__dots"></span><span class="menu-item__price">5,50 €</span></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Ragnar IPA <small>houblonnée</small></span><span class="menu-item__dots"></span><span class="menu-item__price">6,30 €</span></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Cidre normand <small>brut 4,5°</small></span><span class="menu-item__dots"></span><span class="menu-item__price">5,30 €</span></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row"><span class="menu-item__name">Vin rouge <small>15 cl · pinot noir</small></span><span class="menu-item__dots"></span><span class="menu-item__price">4,20 €</span></div>
+            <p class="menu-item__desc">Bouteille 22 €. L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+          </div>
+        </div>
+        <p class="mono" data-reveal style="--i:2;margin-top:34px;font-size:.72rem;opacity:.6;">Prix nets en euros, service compris (TVA incluse). Viandes d'origine Normandie &amp; France, sélectionnées avec soin. Allergènes : demandez-nous, on vous renseigne avec plaisir.</p>
+      </div>
+    </section>
+
+    <!-- ============ CTA COMMANDE ============ -->
+    <section class="section section--marine order-cta has-deco">
+      <span class="deco deco--float" data-parallax="0.2" style="width:min(34vw,380px);height:380px;top:-90px;left:-80px;background-image:url('assets/icons/white/burger.png');"></span>
+      <div class="container">
+        <p class="eyebrow" data-reveal style="justify-content:center;">Prêt à te régaler ?</p>
+        <h2 class="title-lg" data-reveal style="--i:1">Commande ton burger<br>en ligne</h2>
+        <p class="mono" data-reveal style="--i:2;max-width:620px;margin:0 auto 30px;">Livraison ou à emporter · Petit Quevilly &amp; Rouen centre-ville · C'est prêt en quelques minutes.</p>
+        <span data-reveal style="--i:3;display:inline-block;"><a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener" class="btn btn--white">Commander maintenant <span class="arrow">→</span></a></span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer2">
+    <div class="container">
+      <div class="footer2__top">
+        <div class="footer2__brand">
+          <img class="footer2__logo" src="assets/logo-blanc.png" alt="M. Patachon">
+          <p class="footer2__sign">C'est bon, c'est maison, c'est Patachon</p>
+        </div>
+        <div class="footer2__cols">
+          <div class="footer2__col">
+            <h4>Menu</h4>
+            <a href="index.html">Accueil</a>
+            <a href="hors-les-murs.html">Food truck</a>
+            <a href="la-carte.html">La Carte</a>
+            <a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener">Commander</a>
+          </div>
+          <div class="footer2__col">
+            <h4>Nous trouver</h4>
+            <a href="https://share.google/FiSBdYS68avdDfdCx" target="_blank" rel="noopener">Petit Quevilly<br>7 Rue Hélène Boucher</a>
+            <a href="https://share.google/U9talpZV67t7AD55W" target="_blank" rel="noopener">Rouen Centre-ville<br>66 Rue de la Vicomté</a>
+          </div>
+          <div class="footer2__col">
+            <h4>Contact</h4>
+            <a href="tel:0780959883">07 80 95 98 83 · Food truck</a>
+            <a href="mailto:patacrew@m-patachon.fr">patacrew@m-patachon.fr</a>
+            <a href="https://www.instagram.com/m.patachon/" target="_blank" rel="noopener">Instagram @m.patachon</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer2__bar">
+        <span>© <span id="year"></span> M. Patachon — Rouen. Tous droits réservés.</span>
+        <div class="footer2__links">
+          <a href="#">Programme fidélité</a>
+          <a href="#">Mentions légales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CTA sticky mobile -->
+  <div class="sticky-cta">
+    <button type="button" class="btn btn--outline-white sticky-cta__call" aria-label="Appeler un restaurant" aria-haspopup="dialog" data-call-open>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.3 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.3 1l-2.2 2.2z"/></svg>
+    </button>
+    <a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener" class="btn btn--white sticky-cta__devis">Commander en ligne <span class="arrow">→</span></a>
+  </div>
+
+  <!-- Choix du restaurant à appeler -->
+  <div class="call-sheet" id="callSheet" aria-hidden="true">
+    <div class="call-sheet__backdrop" data-call-close></div>
+    <div class="call-sheet__panel" role="dialog" aria-modal="true" aria-labelledby="callSheetTitle">
+      <button type="button" class="call-sheet__close" aria-label="Fermer" data-call-close>&times;</button>
+      <span class="call-sheet__kicker">Un burger à emporter ?</span>
+      <h3 id="callSheetTitle">Quel resto appeler ?</h3>
+      <a href="tel:0953459193" class="call-sheet__opt">
+        <span class="call-sheet__opt-info"><span class="call-sheet__opt-name">Petit Quevilly</span><span class="call-sheet__opt-sub">7 Rue Hélène Boucher</span></span>
+        <span class="call-sheet__opt-num">09 53 45 91 93</span>
+      </a>
+      <a href="tel:0955938278" class="call-sheet__opt">
+        <span class="call-sheet__opt-info"><span class="call-sheet__opt-name">Rouen Centre-ville</span><span class="call-sheet__opt-sub">66 Rue de la Vicomté</span></span>
+        <span class="call-sheet__opt-num">09 55 93 82 78</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

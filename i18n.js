@@ -1,0 +1,655 @@
+// M. Patachon — i18n (FR par défaut, + EN / ES / DE)
+// Traduction par correspondance du texte source FR. Les noms de produits et
+// de marque (Le Fraîchon, Le Chirac, Ragnar, la signature « C'est bon,
+// c'est maison, c'est Patachon », etc.) restent volontairement en français.
+(function () {
+  'use strict';
+
+  var DICT = {
+    en: {
+      // — Navigation / commun —
+      "Accueil": "Home", "La Carte": "Menu", "Commander": "Order",
+      "Voir la carte": "See the menu", "Livraison": "Delivery",
+      "À emporter": "Takeaway", "Sur place": "Dine in",
+      "Menu": "Menu", "Nous trouver": "Find us", "Contact": "Contact",
+      "Programme fidélité": "Loyalty program", "Mentions légales": "Legal notice",
+      "M. Patachon — Rouen. Tous droits réservés.": "M. Patachon — Rouen. All rights reserved.",
+      "Un burger à emporter ?": "A burger to go?", "Quel resto appeler ?": "Which spot to call?",
+      "Appeler un restaurant": "Call a restaurant", "Appeler": "Call", "Fermer": "Close",
+      "Demander un devis": "Request a quote", "Itinéraire": "Directions",
+      "Ou appelle-nous": "Or call us",
+      // — Horaires —
+      "Ouvert le soir": "Open evenings", "Midi & soir": "Lunch & dinner",
+      "Mar–Sam · 19h00–22h30": "Tue–Sat · 19:00–22:30",
+      "Dim · 19h00–22h00": "Sun · 19:00–22:00", "· Lun fermé": "· Mon closed",
+      "Mar–Sam · 11h45–14h00 · 19h00–22h30": "Tue–Sat · 11:45–14:00 · 19:00–22:30",
+      "Dim · 19h00–22h30": "Sun · 19:00–22:30",
+      // — Accueil —
+      "ÉLU MEILLEUR BURGER DE NORMANDIE · PRIMÉ 2024 · 2025 ·": "VOTED BEST BURGER IN NORMANDY · AWARDED 2024 · 2025 ·",
+      "Pas de blabla, juste du bon": "No fuss, just good food",
+      "À propos": "About",
+      "M. Patachon est né entre deux amis et beaucoup d'appétit. On a imaginé le burger qu'on avait envie de manger : du fait maison, des produits bien choisis, des recettes généreuses pour les viandards comme pour les végétariens. Pas de blabla. Juste du bon.": "M. Patachon was born between two friends and a big appetite. We dreamed up the burger we actually wanted to eat: homemade, carefully chosen ingredients, generous recipes for meat lovers and vegetarians alike. No fuss. Just good food.",
+      "Adresses à Rouen": "Addresses in Rouen", "Fait maison": "Homemade",
+      "Burger de Normandie 2024": "Burger in Normandy 2024", "1ᵉʳ": "1st",
+      "La recette Patachon": "The Patachon recipe",
+      "🥇 Élu meilleur burger de Normandie 2024": "🥇 Voted best burger in Normandy 2024",
+      "Primé en 2025": "Awarded in 2025",
+      "Gros pains": "Big buns", "Steak maison": "Homemade patty", "Zéro chichi": "No frills",
+      "Commande ton burger !": "Order your burger!", "fait maison,": "homemade,", "sans blabla": "no fuss",
+      "Où nous trouver": "Where to find us", "Nos restaurants": "Our restaurants",
+      "on débarque": "we roll up", "chez toi !": "to your place!",
+      "Le food truck": "The food truck", "Le meilleur burger": "The best burger",
+      "débarque chez vous": "rolls up to your place",
+      "Mariage, séminaire, anniv' ou festival : on installe le food truck là où ça se passe et on régale vos invités avec le meilleur burger de Normandie. Vous profitez, on gère tout.": "Wedding, seminar, birthday or festival: we set up the food truck wherever it's happening and treat your guests to the best burger in Normandy. You enjoy, we handle everything.",
+      "Mariage": "Wedding", "Lendemain de mariage": "Day after the wedding",
+      "Séminaire": "Seminar", "Anniversaire": "Birthday", "Pro": "Corporate",
+      "Comment ça marche": "How it works", "Dis-nous tout": "Tell us everything",
+      "Date, lieu, nombre de convives : parle-nous de ton événement en 2 min.": "Date, place, number of guests: tell us about your event in 2 min.",
+      "Devis sur-mesure": "Tailored quote",
+      "On te répond vite avec une offre claire et un menu adapté. Pas de blabla.": "We reply fast with a clear offer and a menu to match. No fuss.",
+      "On débarque": "We roll up",
+      "Le food truck s'installe et régale tout le monde. Toi, tu profites.": "The food truck sets up and treats everyone. You just enjoy.",
+      "on charbonne": "we hustle", "ensemble": "together", "On recrute": "We're hiring",
+      "Rejoins la": "Join the",
+      "Envie de charbonner avec nous ? Si tu as l'esprit M. Patachon, envoie ton CV et une lettre de motivation (sois créatif !). On a hâte de voir ce que tu as dans le ventre !": "Fancy hustling with us? If you've got the M. Patachon spirit, send your CV and a cover letter (get creative!). We can't wait to see what you're made of!",
+      "Postule ici": "Apply here", "La communauté": "The community",
+      "Rejoins-nous": "Join us", "sur nos réseaux": "on social media",
+      "Suivre sur Instagram": "Follow on Instagram",
+      // — Food truck —
+      "Food truck événementiel · Rouen & Normandie": "Event food truck · Rouen & Normandy",
+      "Le food truck qui régale vos événements": "The food truck that delights your events",
+      "Mariage, séminaire, anniversaire ou festival : on débarque avec le meilleur burger de Normandie, notre camion et notre bonne humeur. Vous profitez, on s'occupe de tout.": "Wedding, seminar, birthday or festival: we roll up with the best burger in Normandy, our truck and our good vibes. You enjoy, we take care of everything.",
+      "Demander un devis gratuit": "Request a free quote",
+      "Devis gratuit sous 24h": "Free quote within 24h", "Sans engagement": "No commitment",
+      "100% fait maison": "100% homemade", "Meilleur burger": "Best burger",
+      "de Normandie 2024": "in Normandy 2024",
+      "Réponse à ta demande": "Reply to your request", "Blabla, juste du bon": "No blabla, just good food",
+      "Pour qui ?": "For whom?", "Un food truck pour": "A food truck for",
+      "tous vos événements": "all your events",
+      "Un dîner ou un brunch qui change du traiteur classique. Vos invités s'en souviennent.": "A dinner or brunch that breaks from the classic caterer. Your guests will remember it.",
+      "Le format parfait, convivial et sans chichi, pour prolonger la fête en toute simplicité.": "The perfect format, friendly and fuss-free, to keep the party going with ease.",
+      "Séminaire & entreprise": "Seminar & corporate",
+      "Team building, inauguration, afterwork : on régale vos équipes et vos clients.": "Team building, launch, afterwork: we treat your teams and clients.",
+      "18, 30, 50 ans ou juste l'envie de se faire plaisir : on met l'ambiance et les burgers.": "18, 30, 50 or just for the fun of it: we bring the vibe and the burgers.",
+      "Festival & marché": "Festival & market",
+      "Gros volumes, service rapide, qualité constante : on tient la cadence sans jamais bâcler.": "High volumes, fast service, consistent quality: we keep the pace without cutting corners.",
+      "Soirée privée": "Private party",
+      "Entre amis, en famille, pour une occasion spéciale : le camion vient à vous.": "With friends, family, for a special occasion: the truck comes to you.",
+      "Le vrai camion Patachon": "The real Patachon truck",
+      "On installe tout, chez vous": "We set up everything, at your place",
+      "Au menu": "On the menu", "Tout est compris,": "Everything's included,",
+      "vous n'avez qu'à profiter": "you just have to enjoy",
+      "Le burger signature, choisi ensemble selon votre événement": "The signature burger, chosen together to fit your event",
+      "Les patates de Normandie rôties à l'ail, faites maison": "Normandy potatoes roasted with garlic, homemade",
+      "Les cookies pur beurre, faits maison eux aussi": "Pure butter cookies, homemade too",
+      "L'option végétarienne ou le bœuf effiloché à la bourguignonne": "The vegetarian option or pulled beef bourguignon",
+      "Le camion, l'équipe et le service — on installe et on gère tout": "The truck, the team and the service — we set up and handle everything",
+      "Composer mon menu": "Build my menu", "Pourquoi M. Patachon": "Why M. Patachon",
+      "La différence Patachon": "The Patachon difference", "Élu n°1 en Normandie": "Voted no.1 in Normandy",
+      "Meilleur burger de Normandie 2024, primé en 2025. Vos invités sont entre de bonnes mains.": "Best burger in Normandy 2024, awarded in 2025. Your guests are in good hands.",
+      "Bœuf, crème et pains de notre boulanger, des recettes maison, du goût. Pas de surgelé, pas de blabla.": "Beef, cream and buns from our baker, homemade recipes, real flavor. No frozen food, no fuss.",
+      "Clé en main": "Turnkey",
+      "On s'occupe de tout : installation, service, propreté. Vous n'avez rien à gérer.": "We handle everything: setup, service, cleanup. You have nothing to manage.",
+      "Une équipe qui régale": "A team that delivers",
+      "De la bonne humeur, du sourire et le sens de la fête. On vient aussi mettre l'ambiance.": "Good vibes, smiles and a sense of celebration. We bring the party too.",
+      "Date, lieu, nombre de convives : remplis le devis en 2 minutes.": "Date, place, number of guests: fill out the quote in 2 minutes.",
+      "Devis sous 24h": "Quote within 24h",
+      "On te répond vite avec une offre claire et un menu sur-mesure.": "We reply fast with a clear offer and a tailored menu.",
+      "Le jour J, le food truck s'installe et régale tout le monde.": "On the big day, the food truck sets up and treats everyone.",
+      "Ils nous ont fait confiance": "They trusted us", "On a régalé leurs événements": "We catered their events",
+      "« Le food truck a fait un carton à notre mariage. Les invités en parlent encore, et le burger est juste incroyable. »": "“The food truck was a huge hit at our wedding. Guests still talk about it, and the burger is just incredible.”",
+      "Mariage · 120 invités": "Wedding · 120 guests",
+      "« Séminaire réussi grâce à eux : service au top, produits maison et une équipe hyper sympa. On refait sans hésiter. »": "“A successful seminar thanks to them: top service, homemade products and a super friendly team. We'd do it again in a heartbeat.”",
+      "Séminaire d'entreprise · 60 pers.": "Corporate seminar · 60 people",
+      "« Pour mes 30 ans je voulais du bon et du convivial. Mission accomplie, tout le monde s'est régalé. »": "“For my 30th I wanted good food and good vibes. Mission accomplished, everyone loved it.”",
+      "Anniversaire · 40 pers.": "Birthday · 40 people",
+      "Vous vous demandez…": "Wondering…", "Questions fréquentes": "FAQ",
+      "Où vous déplacez-vous ?": "Where do you travel?",
+      "Rouen, sa métropole et toute la Normandie. Un peu plus loin ? Parlez-nous-en, on trouve toujours une solution.": "Rouen, its metro area and all of Normandy. A bit further? Tell us, we always find a solution.",
+      "À partir de combien de personnes ?": "From how many people?",
+      "Le food truck prend tout son sens à partir d'une trentaine de convives. Dites-nous votre nombre, on adapte l'offre.": "The food truck makes sense from around thirty guests. Tell us your number, we adapt the offer.",
+      "Combien de temps à l'avance réserver ?": "How far in advance to book?",
+      "Le plus tôt possible, surtout en pleine saison (mai à septembre). Mais tentez toujours : on fait au mieux pour vous caler.": "As early as possible, especially in peak season (May to September). But always ask: we do our best to fit you in.",
+      "Y a-t-il une option végétarienne ?": "Is there a vegetarian option?",
+      "Oui, un burger végé gourmand est prévu. On s'adapte aussi à vos contraintes et allergies.": "Yes, a hearty veggie burger is on offer. We also adapt to your constraints and allergies.",
+      "Combien ça coûte ?": "How much does it cost?",
+      "Chaque événement est unique : le tarif dépend du nombre de convives, du menu et du lieu. Demandez votre devis gratuit, réponse sous 24h.": "Every event is unique: the price depends on the number of guests, the menu and the location. Request your free quote, reply within 24h.",
+      "On s'occupe du reste": "We handle the rest",
+      "Demandez votre devis gratuit": "Request your free quote",
+      "Réponse sous 24h · Sans engagement · Un menu sur-mesure pour votre événement": "Reply within 24h · No commitment · A tailored menu for your event",
+      "Nom & prénom *": "Full name *", "Téléphone *": "Phone *",
+      "Date de l'événement": "Event date", "Nombre de personnes": "Number of guests",
+      "Type d'événement": "Event type", "Choisir…": "Choose…",
+      "Mariage / Lendemain de mariage": "Wedding / Day after", "Professionnel": "Corporate", "Autre": "Other",
+      "Dites-nous en plus": "Tell us more", "Recevoir mon devis gratuit": "Get my free quote",
+      "Réponse sous 24h": "Reply within 24h", "Devis 100% gratuit": "100% free quote",
+      "Une question rapide ? Appelez-nous au": "A quick question? Call us at",
+      "Ne pas remplir": "Do not fill",
+      "vous@email.com": "you@email.com",
+      "Lieu, ambiance, budget indicatif, demandes particulières…": "Place, vibe, rough budget, special requests…",
+      // — La Carte —
+      "La carte · Élu meilleur burger de Normandie": "The menu · Voted best burger in Normandy",
+      "La carte": "The menu",
+      "Du fait maison, des produits bien choisis, des recettes généreuses — pour les viandards comme pour les végé. Compose ton burger et commande en ligne en 2 minutes.": "Homemade, carefully chosen ingredients, generous recipes — for meat lovers and veggies alike. Build your burger and order online in 2 minutes.",
+      "Commander en ligne": "Order online", "Voir les burgers": "See the burgers",
+      "Pain du boulanger": "Baker's bread", "Option végé": "Veggie option",
+      "Édition limitée": "Limited edition", "La recette du moment": "This month's recipe",
+      "Nouveau · Édition limitée": "New · Limited edition",
+      "Truite fumée fondante, avocat bien crémeux et pickles de radis rose faits maison, réveillés par une sauce fraîche cottage & herbes — ciboulette, menthe, aneth, citron vert et une pointe de piment d'Espelette. Coleslaw qui croque, pain brioché doré. Frais, vif, délicatement canaille : le burger qui te fait de l'œil.": "Melt-in-the-mouth smoked trout, creamy avocado and homemade pink radish pickles, brought to life by a fresh cottage & herb sauce — chives, mint, dill, lime and a hint of Espelette pepper. Crunchy coleslaw, golden brioche bun. Fresh, lively, delightfully cheeky: the burger that winks at you.",
+      "Truite fumée": "Smoked trout", "Avocat": "Avocado", "Pickles de radis": "Radish pickles",
+      "Sauce cottage & herbes": "Cottage & herb sauce", "Citron vert": "Lime",
+      "Les burgers": "The burgers", "Une recette, une protéine au choix": "One recipe, one protein of your choice",
+      "Protéine au choix, cheddar, sauce crème, confit d'oignons, pickles de cornichons, salade.": "Protein of your choice, cheddar, cream sauce, onion confit, gherkin pickles, salad.",
+      "Protéine au choix, camembert rôti, sauce calvados, pomme cuite, salade.": "Protein of your choice, roasted camembert, calvados sauce, cooked apple, salad.",
+      "Protéine au choix, chèvre, noix, sauce miel-moutarde, confit d'oignons, salade.": "Protein of your choice, goat cheese, walnuts, honey-mustard sauce, onion confit, salad.",
+      "Protéine au choix, mozzarella, crème de pesto, confit de tomate, oignons et câpres, salade.": "Protein of your choice, mozzarella, pesto cream, tomato confit, onions and capers, salad.",
+      "Protéine au choix, chèvre, crème de chorizo, chips de chorizo, confit d'oignons, salade.": "Protein of your choice, goat cheese, chorizo cream, chorizo chips, onion confit, salad.",
+      "La recette éphémère du chef. À découvrir au comptoir (ou en ligne selon la saison).": "The chef's fleeting recipe. Discover it at the counter (or online, depending on the season).",
+      "Choisis ta protéine": "Choose your protein",
+      "Incluse — même prix, aucun supplément": "Included — same price, no extra charge",
+      "Bœuf bourguignon": "Beef bourguignon", "Mijoté maison": "Slow-cooked",
+      "Bœuf normand": "Norman beef", "Haché frais": "Freshly ground",
+      "Poulet frit": "Fried chicken", "Croustillant": "Crispy",
+      "Végétarien": "Vegetarian", "HappyVore · 100% végétal": "HappyVore · 100% plant-based",
+      "Gonfle ton burger": "Beef up your burger", "Double viande": "Double meat", "Double fromage": "Double cheese",
+      "Passe en menu": "Make it a meal", "Frites maison + sauce, ou coleslaw": "Homemade fries + sauce, or coleslaw",
+      "Notre poutine revisitée à la française": "Our poutine, French-style",
+      "1 protéine + 1 sauce au choix, sur un lit de frites maison.": "1 protein + 1 sauce of your choice, on a bed of homemade fries.",
+      "2 protéines + 2 sauces au choix. Pour les bons vivants.": "2 proteins + 2 sauces of your choice. For the good-life lovers.",
+      "3 protéines + 3 sauces au choix. Le défi ultime.": "3 proteins + 3 sauces of your choice. The ultimate challenge.",
+      "Choisis tes protéines": "Choose your proteins",
+      "Selon la taille — 1, 2 ou 3 au choix": "Depending on size — 1, 2 or 3 of your choice",
+      "Saucisse de canard": "Duck sausage", "Fumée": "Smoked", "100% végétal": "100% plant-based",
+      "Choix de la sauce": "Choice of sauce", "(servie sur les protéines)": "(served over the proteins)",
+      "Poivre": "Pepper", "Moutarde à l'ancienne": "Wholegrain mustard",
+      "Sides": "Sides", "À côté ou à partager": "On the side or to share",
+      "Poulet frit maison, cheddar, sauce barbecue, pain brioché.": "Homemade fried chicken, cheddar, barbecue sauce, brioche bun.",
+      "Frites maison": "Homemade fries", "Salade coleslaw": "Coleslaw salad", "Cookie pur beurre": "Pure butter cookie",
+      "Menu enfant": "Kids' meal", "12,90 € · 1 plat au choix + une boisson": "€12.90 · 1 dish of choice + a drink",
+      "Burger Patatoune + frites": "Patatoune burger + fries",
+      "Poulet frit maison, cheddar, ketchup, pain brioché.": "Homemade fried chicken, cheddar, ketchup, brioche bun.",
+      "ou": "or", "Poulet frit + frites": "Fried chicken + fries",
+      "Poulet frit maison, servi avec des frites maison.": "Homemade fried chicken, served with homemade fries.",
+      "+ Boisson incluse —": "+ Drink included —",
+      "Sirop à l'eau (20 cl) : menthe, violette, grenadine ou pêche.": "Cordial water (20 cl): mint, violet, grenadine or peach.",
+      "Sauces maison": "Homemade sauces", "Faites maison, pour tremper tes frites": "Homemade, for dipping your fries",
+      "Les classiques": "The classics", "Marocaine": "Moroccan",
+      "Poivre +1 €": "Pepper +1 €", "Fondue au fromage": "Cheese fondue", "(à saucer)": "(for dipping)",
+      "Boissons": "Drinks",
+      "Softs maison · bières du brasseur Ragnar · cidre de Normandie": "Homemade softs · beers from brewer Ragnar · Normandy cider",
+      "Softs": "Soft drinks", "à emporter · 33 cl": "takeaway · 33 cl",
+      "Mangue, citron vert, limonade.": "Mango, lime, lemonade.", "Thé glacé maison": "Homemade iced tea",
+      "Sirop au choix : menthe, violette, grenadine, pêche.": "Syrup of choice: mint, violet, grenadine, peach.",
+      "Sirop à l'eau": "Cordial water",
+      "Bières & cidre": "Beers & cider", "brassées par Ragnar": "brewed by Ragnar",
+      "blonde de soif": "easy-drinking lager", "houblonnée": "hoppy",
+      "Cidre normand": "Norman cider", "brut 4,5°": "dry 4.5°", "Vin rouge": "Red wine",
+      "Bouteille 22 €. L'abus d'alcool est dangereux pour la santé, à consommer avec modération.": "Bottle €22. Alcohol abuse is dangerous for your health, consume in moderation.",
+      "Prix nets en euros, service compris (TVA incluse). Viandes d'origine Normandie & France, sélectionnées avec soin. Allergènes : demandez-nous, on vous renseigne avec plaisir.": "Net prices in euros, service included (VAT included). Meats sourced from Normandy & France, carefully selected. Allergens: ask us, we're happy to help.",
+      "Prêt à te régaler ?": "Ready to treat yourself?", "Commande ton burger": "Order your burger", "en ligne": "online",
+      "Livraison ou à emporter · Petit Quevilly & Rouen centre-ville · C'est prêt en quelques minutes.": "Delivery or takeaway · Petit Quevilly & Rouen city centre · Ready in a few minutes.",
+      "Commander maintenant": "Order now"
+    },
+
+    es: {
+      "Accueil": "Inicio", "La Carte": "Carta", "Commander": "Pedir",
+      "Voir la carte": "Ver la carta", "Livraison": "A domicilio",
+      "À emporter": "Para llevar", "Sur place": "En el local",
+      "Menu": "Menú", "Nous trouver": "Dónde estamos", "Contact": "Contacto",
+      "Programme fidélité": "Programa de fidelidad", "Mentions légales": "Aviso legal",
+      "M. Patachon — Rouen. Tous droits réservés.": "M. Patachon — Rouen. Todos los derechos reservados.",
+      "Un burger à emporter ?": "¿Una hamburguesa para llevar?", "Quel resto appeler ?": "¿A qué local llamar?",
+      "Appeler un restaurant": "Llamar a un restaurante", "Appeler": "Llamar", "Fermer": "Cerrar",
+      "Demander un devis": "Pedir presupuesto", "Itinéraire": "Cómo llegar",
+      "Ou appelle-nous": "O llámanos",
+      "Ouvert le soir": "Abierto por la noche", "Midi & soir": "Mediodía y noche",
+      "Mar–Sam · 19h00–22h30": "Mar–Sáb · 19:00–22:30",
+      "Dim · 19h00–22h00": "Dom · 19:00–22:00", "· Lun fermé": "· Lun cerrado",
+      "Mar–Sam · 11h45–14h00 · 19h00–22h30": "Mar–Sáb · 11:45–14:00 · 19:00–22:30",
+      "Dim · 19h00–22h30": "Dom · 19:00–22:30",
+      "ÉLU MEILLEUR BURGER DE NORMANDIE · PRIMÉ 2024 · 2025 ·": "MEJOR HAMBURGUESA DE NORMANDÍA · PREMIADO 2024 · 2025 ·",
+      "Pas de blabla, juste du bon": "Sin rollos, solo lo bueno", "À propos": "Sobre nosotros",
+      "M. Patachon est né entre deux amis et beaucoup d'appétit. On a imaginé le burger qu'on avait envie de manger : du fait maison, des produits bien choisis, des recettes généreuses pour les viandards comme pour les végétariens. Pas de blabla. Juste du bon.": "M. Patachon nació entre dos amigos y mucho apetito. Imaginamos la hamburguesa que de verdad queríamos comer: casera, con productos bien elegidos, recetas generosas tanto para carnívoros como para vegetarianos. Sin rollos. Solo lo bueno.",
+      "Adresses à Rouen": "Direcciones en Rouen", "Fait maison": "Casero",
+      "Burger de Normandie 2024": "Hamburguesa de Normandía 2024", "1ᵉʳ": "1º",
+      "La recette Patachon": "La receta Patachon",
+      "🥇 Élu meilleur burger de Normandie 2024": "🥇 Mejor hamburguesa de Normandía 2024",
+      "Primé en 2025": "Premiado en 2025",
+      "Gros pains": "Panes generosos", "Steak maison": "Carne casera", "Zéro chichi": "Sin pretensiones",
+      "Commande ton burger !": "¡Pide tu hamburguesa!", "fait maison,": "casero,", "sans blabla": "sin rollos",
+      "Où nous trouver": "Dónde encontrarnos", "Nos restaurants": "Nuestros restaurantes",
+      "on débarque": "llegamos", "chez toi !": "¡a tu casa!",
+      "Le food truck": "El food truck", "Le meilleur burger": "La mejor hamburguesa",
+      "débarque chez vous": "llega a tu evento",
+      "Mariage, séminaire, anniv' ou festival : on installe le food truck là où ça se passe et on régale vos invités avec le meilleur burger de Normandie. Vous profitez, on gère tout.": "Boda, seminario, cumpleaños o festival: instalamos el food truck donde sea y deleitamos a tus invitados con la mejor hamburguesa de Normandía. Tú disfrutas, nosotros nos ocupamos de todo.",
+      "Mariage": "Boda", "Lendemain de mariage": "Post-boda", "Séminaire": "Seminario",
+      "Anniversaire": "Cumpleaños", "Pro": "Empresas",
+      "Comment ça marche": "Cómo funciona", "Dis-nous tout": "Cuéntanoslo todo",
+      "Date, lieu, nombre de convives : parle-nous de ton événement en 2 min.": "Fecha, lugar, número de invitados: cuéntanos tu evento en 2 min.",
+      "Devis sur-mesure": "Presupuesto a medida",
+      "On te répond vite avec une offre claire et un menu adapté. Pas de blabla.": "Respondemos rápido con una oferta clara y un menú a medida. Sin rollos.",
+      "On débarque": "Llegamos",
+      "Le food truck s'installe et régale tout le monde. Toi, tu profites.": "El food truck se instala y deleita a todos. Tú, a disfrutar.",
+      "on charbonne": "a currar", "ensemble": "juntos", "On recrute": "Buscamos gente",
+      "Rejoins la": "Únete a la",
+      "Envie de charbonner avec nous ? Si tu as l'esprit M. Patachon, envoie ton CV et une lettre de motivation (sois créatif !). On a hâte de voir ce que tu as dans le ventre !": "¿Te apetece currar con nosotros? Si tienes el espíritu M. Patachon, envía tu CV y una carta de motivación (¡sé creativo!). ¡Estamos deseando ver lo que llevas dentro!",
+      "Postule ici": "Postúlate aquí", "La communauté": "La comunidad",
+      "Rejoins-nous": "Únete", "sur nos réseaux": "en nuestras redes",
+      "Suivre sur Instagram": "Seguir en Instagram",
+      "Food truck événementiel · Rouen & Normandie": "Food truck para eventos · Rouen y Normandía",
+      "Le food truck qui régale vos événements": "El food truck que deleita tus eventos",
+      "Mariage, séminaire, anniversaire ou festival : on débarque avec le meilleur burger de Normandie, notre camion et notre bonne humeur. Vous profitez, on s'occupe de tout.": "Boda, seminario, cumpleaños o festival: llegamos con la mejor hamburguesa de Normandía, nuestro camión y muy buen rollo. Tú disfrutas, nosotros nos ocupamos de todo.",
+      "Demander un devis gratuit": "Pedir presupuesto gratis",
+      "Devis gratuit sous 24h": "Presupuesto gratis en 24h", "Sans engagement": "Sin compromiso",
+      "100% fait maison": "100% casero", "Meilleur burger": "Mejor hamburguesa",
+      "de Normandie 2024": "de Normandía 2024",
+      "Réponse à ta demande": "Respuesta a tu solicitud", "Blabla, juste du bon": "Sin blabla, solo lo bueno",
+      "Pour qui ?": "¿Para quién?", "Un food truck pour": "Un food truck para", "tous vos événements": "todos tus eventos",
+      "Un dîner ou un brunch qui change du traiteur classique. Vos invités s'en souviennent.": "Una cena o un brunch que rompe con el catering clásico. Tus invitados lo recordarán.",
+      "Le format parfait, convivial et sans chichi, pour prolonger la fête en toute simplicité.": "El formato perfecto, ameno y sin pretensiones, para alargar la fiesta con sencillez.",
+      "Séminaire & entreprise": "Seminario y empresa",
+      "Team building, inauguration, afterwork : on régale vos équipes et vos clients.": "Team building, inauguración, afterwork: deleitamos a tus equipos y clientes.",
+      "18, 30, 50 ans ou juste l'envie de se faire plaisir : on met l'ambiance et les burgers.": "18, 30, 50 años o solo por gusto: ponemos el ambiente y las hamburguesas.",
+      "Festival & marché": "Festival y mercado",
+      "Gros volumes, service rapide, qualité constante : on tient la cadence sans jamais bâcler.": "Grandes volúmenes, servicio rápido, calidad constante: mantenemos el ritmo sin descuidar nada.",
+      "Soirée privée": "Fiesta privada",
+      "Entre amis, en famille, pour une occasion spéciale : le camion vient à vous.": "Entre amigos, en familia, para una ocasión especial: el camión va a ti.",
+      "Le vrai camion Patachon": "El auténtico camión Patachon",
+      "On installe tout, chez vous": "Lo montamos todo, en tu evento",
+      "Au menu": "En el menú", "Tout est compris,": "Todo incluido,",
+      "vous n'avez qu'à profiter": "solo tienes que disfrutar",
+      "Le burger signature, choisi ensemble selon votre événement": "La hamburguesa estrella, elegida juntos según tu evento",
+      "Les patates de Normandie rôties à l'ail, faites maison": "Las patatas de Normandía asadas al ajo, caseras",
+      "Les cookies pur beurre, faits maison eux aussi": "Las cookies de pura mantequilla, también caseras",
+      "L'option végétarienne ou le bœuf effiloché à la bourguignonne": "La opción vegetariana o la ternera deshilachada a la bourguignonne",
+      "Le camion, l'équipe et le service — on installe et on gère tout": "El camión, el equipo y el servicio — lo montamos y gestionamos todo",
+      "Composer mon menu": "Crear mi menú", "Pourquoi M. Patachon": "Por qué M. Patachon",
+      "La différence Patachon": "La diferencia Patachon", "Élu n°1 en Normandie": "Elegido nº1 en Normandía",
+      "Meilleur burger de Normandie 2024, primé en 2025. Vos invités sont entre de bonnes mains.": "Mejor hamburguesa de Normandía 2024, premiada en 2025. Tus invitados están en buenas manos.",
+      "Bœuf, crème et pains de notre boulanger, des recettes maison, du goût. Pas de surgelé, pas de blabla.": "Ternera, nata y panes de nuestro panadero, recetas caseras, sabor. Nada congelado, sin rollos.",
+      "Clé en main": "Llave en mano",
+      "On s'occupe de tout : installation, service, propreté. Vous n'avez rien à gérer.": "Nos ocupamos de todo: montaje, servicio, limpieza. Tú no gestionas nada.",
+      "Une équipe qui régale": "Un equipo que deleita",
+      "De la bonne humeur, du sourire et le sens de la fête. On vient aussi mettre l'ambiance.": "Buen rollo, sonrisas y espíritu festivo. También venimos a poner ambiente.",
+      "Date, lieu, nombre de convives : remplis le devis en 2 minutes.": "Fecha, lugar, número de invitados: rellena el presupuesto en 2 minutos.",
+      "Devis sous 24h": "Presupuesto en 24h",
+      "On te répond vite avec une offre claire et un menu sur-mesure.": "Respondemos rápido con una oferta clara y un menú a medida.",
+      "Le jour J, le food truck s'installe et régale tout le monde.": "El gran día, el food truck se instala y deleita a todos.",
+      "Ils nous ont fait confiance": "Confiaron en nosotros", "On a régalé leurs événements": "Deleitamos sus eventos",
+      "« Le food truck a fait un carton à notre mariage. Les invités en parlent encore, et le burger est juste incroyable. »": "«El food truck triunfó en nuestra boda. Los invitados aún hablan de ello, y la hamburguesa es increíble.»",
+      "Mariage · 120 invités": "Boda · 120 invitados",
+      "« Séminaire réussi grâce à eux : service au top, produits maison et une équipe hyper sympa. On refait sans hésiter. »": "«Seminario exitoso gracias a ellos: servicio genial, productos caseros y un equipo muy majo. Repetimos sin dudar.»",
+      "Séminaire d'entreprise · 60 pers.": "Seminario de empresa · 60 pers.",
+      "« Pour mes 30 ans je voulais du bon et du convivial. Mission accomplie, tout le monde s'est régalé. »": "«Para mis 30 quería algo bueno y ameno. Misión cumplida, todos disfrutaron.»",
+      "Anniversaire · 40 pers.": "Cumpleaños · 40 pers.",
+      "Vous vous demandez…": "¿Te preguntas…?", "Questions fréquentes": "Preguntas frecuentes",
+      "Où vous déplacez-vous ?": "¿Hasta dónde os desplazáis?",
+      "Rouen, sa métropole et toute la Normandie. Un peu plus loin ? Parlez-nous-en, on trouve toujours une solution.": "Rouen, su área metropolitana y toda Normandía. ¿Un poco más lejos? Dínoslo, siempre hay solución.",
+      "À partir de combien de personnes ?": "¿A partir de cuántas personas?",
+      "Le food truck prend tout son sens à partir d'une trentaine de convives. Dites-nous votre nombre, on adapte l'offre.": "El food truck cobra sentido a partir de unos treinta invitados. Dinos tu número y adaptamos la oferta.",
+      "Combien de temps à l'avance réserver ?": "¿Con cuánta antelación reservar?",
+      "Le plus tôt possible, surtout en pleine saison (mai à septembre). Mais tentez toujours : on fait au mieux pour vous caler.": "Cuanto antes, sobre todo en plena temporada (mayo a septiembre). Pero pregunta siempre: hacemos lo posible por encajarte.",
+      "Y a-t-il une option végétarienne ?": "¿Hay opción vegetariana?",
+      "Oui, un burger végé gourmand est prévu. On s'adapte aussi à vos contraintes et allergies.": "Sí, hay una hamburguesa vegetariana sabrosa. También nos adaptamos a tus restricciones y alergias.",
+      "Combien ça coûte ?": "¿Cuánto cuesta?",
+      "Chaque événement est unique : le tarif dépend du nombre de convives, du menu et du lieu. Demandez votre devis gratuit, réponse sous 24h.": "Cada evento es único: el precio depende del número de invitados, el menú y el lugar. Pide tu presupuesto gratis, respuesta en 24h.",
+      "On s'occupe du reste": "Nosotros nos ocupamos del resto",
+      "Demandez votre devis gratuit": "Pide tu presupuesto gratis",
+      "Réponse sous 24h · Sans engagement · Un menu sur-mesure pour votre événement": "Respuesta en 24h · Sin compromiso · Un menú a medida para tu evento",
+      "Nom & prénom *": "Nombre y apellidos *", "Téléphone *": "Teléfono *",
+      "Date de l'événement": "Fecha del evento", "Nombre de personnes": "Número de personas",
+      "Type d'événement": "Tipo de evento", "Choisir…": "Elegir…",
+      "Mariage / Lendemain de mariage": "Boda / Post-boda", "Professionnel": "Profesional", "Autre": "Otro",
+      "Dites-nous en plus": "Cuéntanos más", "Recevoir mon devis gratuit": "Recibir mi presupuesto gratis",
+      "Réponse sous 24h": "Respuesta en 24h", "Devis 100% gratuit": "Presupuesto 100% gratis",
+      "Une question rapide ? Appelez-nous au": "¿Una pregunta rápida? Llámanos al",
+      "Ne pas remplir": "No rellenar", "Email *": "Email *", "vous@email.com": "tu@email.com",
+      "Lieu, ambiance, budget indicatif, demandes particulières…": "Lugar, ambiente, presupuesto orientativo, peticiones especiales…",
+      "La carte · Élu meilleur burger de Normandie": "La carta · Mejor hamburguesa de Normandía",
+      "La carte": "La carta",
+      "Du fait maison, des produits bien choisis, des recettes généreuses — pour les viandards comme pour les végé. Compose ton burger et commande en ligne en 2 minutes.": "Casero, productos bien elegidos, recetas generosas — para carnívoros y veggies. Crea tu hamburguesa y pide online en 2 minutos.",
+      "Commander en ligne": "Pedir online", "Voir les burgers": "Ver las hamburguesas",
+      "Pain du boulanger": "Pan del panadero", "Option végé": "Opción veggie",
+      "Édition limitée": "Edición limitada", "La recette du moment": "La receta del momento",
+      "Nouveau · Édition limitée": "Nuevo · Edición limitada",
+      "Truite fumée fondante, avocat bien crémeux et pickles de radis rose faits maison, réveillés par une sauce fraîche cottage & herbes — ciboulette, menthe, aneth, citron vert et une pointe de piment d'Espelette. Coleslaw qui croque, pain brioché doré. Frais, vif, délicatement canaille : le burger qui te fait de l'œil.": "Trucha ahumada que se deshace, aguacate cremoso y pickles de rábano rosa caseros, avivados por una salsa fresca de cottage y hierbas — cebollino, menta, eneldo, lima y un toque de pimiento de Espelette. Coleslaw crujiente, pan brioche dorado. Fresca, viva, deliciosamente pícara: la hamburguesa que te guiña el ojo.",
+      "Truite fumée": "Trucha ahumada", "Avocat": "Aguacate", "Pickles de radis": "Pickles de rábano",
+      "Sauce cottage & herbes": "Salsa cottage y hierbas", "Citron vert": "Lima",
+      "Les burgers": "Las hamburguesas", "Une recette, une protéine au choix": "Una receta, una proteína a elegir",
+      "Protéine au choix, cheddar, sauce crème, confit d'oignons, pickles de cornichons, salade.": "Proteína a elegir, cheddar, salsa de nata, confitura de cebolla, pepinillos, ensalada.",
+      "Protéine au choix, camembert rôti, sauce calvados, pomme cuite, salade.": "Proteína a elegir, camembert asado, salsa de calvados, manzana cocida, ensalada.",
+      "Protéine au choix, chèvre, noix, sauce miel-moutarde, confit d'oignons, salade.": "Proteína a elegir, queso de cabra, nueces, salsa de miel y mostaza, confitura de cebolla, ensalada.",
+      "Protéine au choix, mozzarella, crème de pesto, confit de tomate, oignons et câpres, salade.": "Proteína a elegir, mozzarella, crema de pesto, confitura de tomate, cebolla y alcaparras, ensalada.",
+      "Protéine au choix, chèvre, crème de chorizo, chips de chorizo, confit d'oignons, salade.": "Proteína a elegir, queso de cabra, crema de chorizo, chips de chorizo, confitura de cebolla, ensalada.",
+      "La recette éphémère du chef. À découvrir au comptoir (ou en ligne selon la saison).": "La receta efímera del chef. Descúbrela en el mostrador (o online según la temporada).",
+      "Choisis ta protéine": "Elige tu proteína",
+      "Incluse — même prix, aucun supplément": "Incluida — mismo precio, sin suplemento",
+      "Bœuf bourguignon": "Ternera bourguignon", "Mijoté maison": "Guisado casero",
+      "Bœuf normand": "Ternera normanda", "Haché frais": "Picado fresco",
+      "Poulet frit": "Pollo frito", "Croustillant": "Crujiente",
+      "Végétarien": "Vegetariano", "HappyVore · 100% végétal": "HappyVore · 100% vegetal",
+      "Gonfle ton burger": "Sube de nivel tu hamburguesa", "Double viande": "Doble carne", "Double fromage": "Doble queso",
+      "Passe en menu": "Hazlo menú", "Frites maison + sauce, ou coleslaw": "Patatas caseras + salsa, o coleslaw",
+      "Notre poutine revisitée à la française": "Nuestra poutine a la francesa",
+      "1 protéine + 1 sauce au choix, sur un lit de frites maison.": "1 proteína + 1 salsa a elegir, sobre un lecho de patatas caseras.",
+      "2 protéines + 2 sauces au choix. Pour les bons vivants.": "2 proteínas + 2 salsas a elegir. Para los buenos vividores.",
+      "3 protéines + 3 sauces au choix. Le défi ultime.": "3 proteínas + 3 salsas a elegir. El reto definitivo.",
+      "Choisis tes protéines": "Elige tus proteínas",
+      "Selon la taille — 1, 2 ou 3 au choix": "Según el tamaño — 1, 2 o 3 a elegir",
+      "Saucisse de canard": "Salchicha de pato", "Fumée": "Ahumada", "100% végétal": "100% vegetal",
+      "Choix de la sauce": "Elección de salsa", "(servie sur les protéines)": "(servida sobre las proteínas)",
+      "Poivre": "Pimienta", "Moutarde à l'ancienne": "Mostaza antigua",
+      "Sides": "Acompañamientos", "À côté ou à partager": "Para acompañar o compartir",
+      "Poulet frit maison, cheddar, sauce barbecue, pain brioché.": "Pollo frito casero, cheddar, salsa barbacoa, pan brioche.",
+      "Frites maison": "Patatas caseras", "Salade coleslaw": "Ensalada coleslaw", "Cookie pur beurre": "Cookie de pura mantequilla",
+      "Menu enfant": "Menú infantil", "12,90 € · 1 plat au choix + une boisson": "12,90 € · 1 plato a elegir + una bebida",
+      "Burger Patatoune + frites": "Hamburguesa Patatoune + patatas",
+      "Poulet frit maison, cheddar, ketchup, pain brioché.": "Pollo frito casero, cheddar, ketchup, pan brioche.",
+      "ou": "o", "Poulet frit + frites": "Pollo frito + patatas",
+      "Poulet frit maison, servi avec des frites maison.": "Pollo frito casero, servido con patatas caseras.",
+      "+ Boisson incluse —": "+ Bebida incluida —",
+      "Sirop à l'eau (20 cl) : menthe, violette, grenadine ou pêche.": "Refresco de sirope (20 cl): menta, violeta, granadina o melocotón.",
+      "Sauces maison": "Salsas caseras", "Faites maison, pour tremper tes frites": "Caseras, para mojar tus patatas",
+      "Les classiques": "Las clásicas", "Mayonnaise": "Mayonesa", "Marocaine": "Marroquí",
+      "Poivre +1 €": "Pimienta +1 €", "Fondue au fromage": "Fondue de queso", "(à saucer)": "(para mojar)",
+      "Boissons": "Bebidas",
+      "Softs maison · bières du brasseur Ragnar · cidre de Normandie": "Refrescos caseros · cervezas del cervecero Ragnar · sidra de Normandía",
+      "Softs": "Refrescos", "à emporter · 33 cl": "para llevar · 33 cl",
+      "Mangue, citron vert, limonade.": "Mango, lima, limonada.", "Thé glacé maison": "Té helado casero",
+      "Sirop au choix : menthe, violette, grenadine, pêche.": "Sirope a elegir: menta, violeta, granadina, melocotón.",
+      "Sirop à l'eau": "Refresco de sirope",
+      "Bières & cidre": "Cervezas y sidra", "brassées par Ragnar": "elaboradas por Ragnar",
+      "blonde de soif": "rubia refrescante", "houblonnée": "lupulada",
+      "Cidre normand": "Sidra normanda", "brut 4,5°": "brut 4,5°", "Vin rouge": "Vino tinto",
+      "Bouteille 22 €. L'abus d'alcool est dangereux pour la santé, à consommer avec modération.": "Botella 22 €. El abuso de alcohol es peligroso para la salud, consúmase con moderación.",
+      "Prix nets en euros, service compris (TVA incluse). Viandes d'origine Normandie & France, sélectionnées avec soin. Allergènes : demandez-nous, on vous renseigne avec plaisir.": "Precios netos en euros, servicio incluido (IVA incluido). Carnes de origen Normandía y Francia, seleccionadas con cuidado. Alérgenos: pregúntanos, te informamos con gusto.",
+      "Prêt à te régaler ?": "¿Listo para darte un festín?", "Commande ton burger": "Pide tu hamburguesa", "en ligne": "online",
+      "Livraison ou à emporter · Petit Quevilly & Rouen centre-ville · C'est prêt en quelques minutes.": "A domicilio o para llevar · Petit Quevilly y Rouen centro · Listo en unos minutos.",
+      "Commander maintenant": "Pedir ahora"
+    },
+
+    de: {
+      "Accueil": "Startseite", "La Carte": "Karte", "Commander": "Bestellen",
+      "Voir la carte": "Zur Karte", "Livraison": "Lieferung",
+      "À emporter": "Zum Mitnehmen", "Sur place": "Vor Ort",
+      "Menu": "Menü", "Nous trouver": "Finde uns", "Contact": "Kontakt",
+      "Programme fidélité": "Treueprogramm", "Mentions légales": "Impressum",
+      "M. Patachon — Rouen. Tous droits réservés.": "M. Patachon — Rouen. Alle Rechte vorbehalten.",
+      "Un burger à emporter ?": "Ein Burger zum Mitnehmen?", "Quel resto appeler ?": "Welches Lokal anrufen?",
+      "Appeler un restaurant": "Ein Restaurant anrufen", "Appeler": "Anrufen", "Fermer": "Schließen",
+      "Demander un devis": "Angebot anfordern", "Itinéraire": "Route",
+      "Ou appelle-nous": "Oder ruf uns an",
+      "Ouvert le soir": "Abends geöffnet", "Midi & soir": "Mittags & abends",
+      "Mar–Sam · 19h00–22h30": "Di–Sa · 19:00–22:30",
+      "Dim · 19h00–22h00": "So · 19:00–22:00", "· Lun fermé": "· Mo geschlossen",
+      "Mar–Sam · 11h45–14h00 · 19h00–22h30": "Di–Sa · 11:45–14:00 · 19:00–22:30",
+      "Dim · 19h00–22h30": "So · 19:00–22:30",
+      "ÉLU MEILLEUR BURGER DE NORMANDIE · PRIMÉ 2024 · 2025 ·": "BESTER BURGER DER NORMANDIE · AUSGEZEICHNET 2024 · 2025 ·",
+      "Pas de blabla, juste du bon": "Kein Blabla, nur Gutes", "À propos": "Über uns",
+      "M. Patachon est né entre deux amis et beaucoup d'appétit. On a imaginé le burger qu'on avait envie de manger : du fait maison, des produits bien choisis, des recettes généreuses pour les viandards comme pour les végétariens. Pas de blabla. Juste du bon.": "M. Patachon entstand zwischen zwei Freunden und viel Appetit. Wir haben uns den Burger ausgedacht, den wir selbst essen wollten: hausgemacht, sorgfältig ausgewählte Produkte, großzügige Rezepte für Fleischliebhaber und Vegetarier. Kein Blabla. Nur Gutes.",
+      "Adresses à Rouen": "Adressen in Rouen", "Fait maison": "Hausgemacht",
+      "Burger de Normandie 2024": "Burger der Normandie 2024", "1ᵉʳ": "1.",
+      "La recette Patachon": "Das Patachon-Rezept",
+      "🥇 Élu meilleur burger de Normandie 2024": "🥇 Bester Burger der Normandie 2024",
+      "Primé en 2025": "Ausgezeichnet 2025",
+      "Gros pains": "Dicke Buns", "Steak maison": "Hausgemachtes Patty", "Zéro chichi": "Ohne Schnickschnack",
+      "Commande ton burger !": "Bestell deinen Burger!", "fait maison,": "hausgemacht,", "sans blabla": "ohne Blabla",
+      "Où nous trouver": "Wo du uns findest", "Nos restaurants": "Unsere Restaurants",
+      "on débarque": "wir kommen", "chez toi !": "zu dir!",
+      "Le food truck": "Der Foodtruck", "Le meilleur burger": "Der beste Burger",
+      "débarque chez vous": "kommt zu dir",
+      "Mariage, séminaire, anniv' ou festival : on installe le food truck là où ça se passe et on régale vos invités avec le meilleur burger de Normandie. Vous profitez, on gère tout.": "Hochzeit, Seminar, Geburtstag oder Festival: Wir stellen den Foodtruck dort auf, wo es passiert, und verwöhnen deine Gäste mit dem besten Burger der Normandie. Du genießt, wir kümmern uns um alles.",
+      "Mariage": "Hochzeit", "Lendemain de mariage": "Tag nach der Hochzeit", "Séminaire": "Seminar",
+      "Anniversaire": "Geburtstag", "Pro": "Firmen",
+      "Comment ça marche": "So funktioniert's", "Dis-nous tout": "Erzähl uns alles",
+      "Date, lieu, nombre de convives : parle-nous de ton événement en 2 min.": "Datum, Ort, Gästezahl: Erzähl uns in 2 Min. von deinem Event.",
+      "Devis sur-mesure": "Individuelles Angebot",
+      "On te répond vite avec une offre claire et un menu adapté. Pas de blabla.": "Wir antworten schnell mit einem klaren Angebot und passendem Menü. Kein Blabla.",
+      "On débarque": "Wir kommen",
+      "Le food truck s'installe et régale tout le monde. Toi, tu profites.": "Der Foodtruck baut auf und verwöhnt alle. Du genießt einfach.",
+      "on charbonne": "wir packen an", "ensemble": "zusammen", "On recrute": "Wir stellen ein",
+      "Rejoins la": "Werde Teil der",
+      "Envie de charbonner avec nous ? Si tu as l'esprit M. Patachon, envoie ton CV et une lettre de motivation (sois créatif !). On a hâte de voir ce que tu as dans le ventre !": "Lust, mit uns anzupacken? Wenn du den M.-Patachon-Spirit hast, schick deinen Lebenslauf und ein Motivationsschreiben (sei kreativ!). Wir sind gespannt, was in dir steckt!",
+      "Postule ici": "Jetzt bewerben", "La communauté": "Die Community",
+      "Rejoins-nous": "Folge uns", "sur nos réseaux": "in den sozialen Medien",
+      "Suivre sur Instagram": "Auf Instagram folgen",
+      "Food truck événementiel · Rouen & Normandie": "Event-Foodtruck · Rouen & Normandie",
+      "Le food truck qui régale vos événements": "Der Foodtruck, der eure Events verwöhnt",
+      "Mariage, séminaire, anniversaire ou festival : on débarque avec le meilleur burger de Normandie, notre camion et notre bonne humeur. Vous profitez, on s'occupe de tout.": "Hochzeit, Seminar, Geburtstag oder Festival: Wir kommen mit dem besten Burger der Normandie, unserem Truck und guter Laune. Du genießt, wir kümmern uns um alles.",
+      "Demander un devis gratuit": "Kostenloses Angebot anfordern",
+      "Devis gratuit sous 24h": "Kostenloses Angebot in 24h", "Sans engagement": "Unverbindlich",
+      "100% fait maison": "100% hausgemacht", "Meilleur burger": "Bester Burger",
+      "de Normandie 2024": "der Normandie 2024",
+      "Réponse à ta demande": "Antwort auf deine Anfrage", "Blabla, juste du bon": "Kein Blabla, nur Gutes",
+      "Pour qui ?": "Für wen?", "Un food truck pour": "Ein Foodtruck für", "tous vos événements": "all eure Events",
+      "Un dîner ou un brunch qui change du traiteur classique. Vos invités s'en souviennent.": "Ein Dinner oder Brunch abseits des klassischen Caterings. Eure Gäste werden sich erinnern.",
+      "Le format parfait, convivial et sans chichi, pour prolonger la fête en toute simplicité.": "Das perfekte Format, gesellig und unkompliziert, um die Feier locker zu verlängern.",
+      "Séminaire & entreprise": "Seminar & Firma",
+      "Team building, inauguration, afterwork : on régale vos équipes et vos clients.": "Teambuilding, Eröffnung, Afterwork: Wir verwöhnen eure Teams und Kunden.",
+      "18, 30, 50 ans ou juste l'envie de se faire plaisir : on met l'ambiance et les burgers.": "18, 30, 50 Jahre oder einfach so: Wir bringen Stimmung und Burger.",
+      "Festival & marché": "Festival & Markt",
+      "Gros volumes, service rapide, qualité constante : on tient la cadence sans jamais bâcler.": "Große Mengen, schneller Service, konstante Qualität: Wir halten das Tempo, ohne zu schludern.",
+      "Soirée privée": "Private Feier",
+      "Entre amis, en famille, pour une occasion spéciale : le camion vient à vous.": "Mit Freunden, Familie, zu einem besonderen Anlass: Der Truck kommt zu dir.",
+      "Le vrai camion Patachon": "Der echte Patachon-Truck",
+      "On installe tout, chez vous": "Wir bauen alles auf, bei dir",
+      "Au menu": "Auf der Karte", "Tout est compris,": "Alles inklusive,",
+      "vous n'avez qu'à profiter": "du musst nur genießen",
+      "Le burger signature, choisi ensemble selon votre événement": "Der Signature-Burger, gemeinsam passend zu eurem Event gewählt",
+      "Les patates de Normandie rôties à l'ail, faites maison": "Kartoffeln aus der Normandie mit Knoblauch geröstet, hausgemacht",
+      "Les cookies pur beurre, faits maison eux aussi": "Butter-Cookies, ebenfalls hausgemacht",
+      "L'option végétarienne ou le bœuf effiloché à la bourguignonne": "Die vegetarische Option oder zerzupftes Rind Bourguignon",
+      "Le camion, l'équipe et le service — on installe et on gère tout": "Truck, Team und Service — wir bauen auf und regeln alles",
+      "Composer mon menu": "Mein Menü zusammenstellen", "Pourquoi M. Patachon": "Warum M. Patachon",
+      "La différence Patachon": "Der Patachon-Unterschied", "Élu n°1 en Normandie": "Nr. 1 in der Normandie",
+      "Meilleur burger de Normandie 2024, primé en 2025. Vos invités sont entre de bonnes mains.": "Bester Burger der Normandie 2024, ausgezeichnet 2025. Eure Gäste sind in guten Händen.",
+      "Bœuf, crème et pains de notre boulanger, des recettes maison, du goût. Pas de surgelé, pas de blabla.": "Rind, Sahne und Buns von unserem Bäcker, hausgemachte Rezepte, Geschmack. Nichts Tiefgekühltes, kein Blabla.",
+      "Clé en main": "Schlüsselfertig",
+      "On s'occupe de tout : installation, service, propreté. Vous n'avez rien à gérer.": "Wir kümmern uns um alles: Aufbau, Service, Sauberkeit. Du musst nichts regeln.",
+      "Une équipe qui régale": "Ein Team, das begeistert",
+      "De la bonne humeur, du sourire et le sens de la fête. On vient aussi mettre l'ambiance.": "Gute Laune, Lächeln und Feierlaune. Wir bringen auch Stimmung mit.",
+      "Date, lieu, nombre de convives : remplis le devis en 2 minutes.": "Datum, Ort, Gästezahl: Angebot in 2 Minuten ausfüllen.",
+      "Devis sous 24h": "Angebot in 24h",
+      "On te répond vite avec une offre claire et un menu sur-mesure.": "Wir antworten schnell mit klarem Angebot und individuellem Menü.",
+      "Le jour J, le food truck s'installe et régale tout le monde.": "Am großen Tag baut der Foodtruck auf und verwöhnt alle.",
+      "Ils nous ont fait confiance": "Sie haben uns vertraut", "On a régalé leurs événements": "Wir haben ihre Events verwöhnt",
+      "« Le food truck a fait un carton à notre mariage. Les invités en parlent encore, et le burger est juste incroyable. »": "„Der Foodtruck war der Hit auf unserer Hochzeit. Die Gäste reden immer noch davon, und der Burger ist einfach unglaublich.“",
+      "Mariage · 120 invités": "Hochzeit · 120 Gäste",
+      "« Séminaire réussi grâce à eux : service au top, produits maison et une équipe hyper sympa. On refait sans hésiter. »": "„Erfolgreiches Seminar dank ihnen: Top-Service, hausgemachte Produkte und ein super nettes Team. Wir machen das ohne zu zögern wieder.“",
+      "Séminaire d'entreprise · 60 pers.": "Firmenseminar · 60 Pers.",
+      "« Pour mes 30 ans je voulais du bon et du convivial. Mission accomplie, tout le monde s'est régalé. »": "„Zu meinem 30. wollte ich gutes Essen und gute Stimmung. Mission erfüllt, alle waren begeistert.“",
+      "Anniversaire · 40 pers.": "Geburtstag · 40 Pers.",
+      "Vous vous demandez…": "Du fragst dich…", "Questions fréquentes": "Häufige Fragen",
+      "Où vous déplacez-vous ?": "Wohin kommt ihr?",
+      "Rouen, sa métropole et toute la Normandie. Un peu plus loin ? Parlez-nous-en, on trouve toujours une solution.": "Rouen, die Region und die ganze Normandie. Etwas weiter? Sprich uns an, wir finden immer eine Lösung.",
+      "À partir de combien de personnes ?": "Ab wie vielen Personen?",
+      "Le food truck prend tout son sens à partir d'une trentaine de convives. Dites-nous votre nombre, on adapte l'offre.": "Der Foodtruck lohnt sich ab etwa dreißig Gästen. Sag uns die Zahl, wir passen das Angebot an.",
+      "Combien de temps à l'avance réserver ?": "Wie früh reservieren?",
+      "Le plus tôt possible, surtout en pleine saison (mai à septembre). Mais tentez toujours : on fait au mieux pour vous caler.": "So früh wie möglich, besonders in der Hochsaison (Mai bis September). Aber frag immer: Wir geben unser Bestes, dich einzuplanen.",
+      "Y a-t-il une option végétarienne ?": "Gibt es eine vegetarische Option?",
+      "Oui, un burger végé gourmand est prévu. On s'adapte aussi à vos contraintes et allergies.": "Ja, ein herzhafter Veggie-Burger ist dabei. Wir gehen auch auf Einschränkungen und Allergien ein.",
+      "Combien ça coûte ?": "Was kostet das?",
+      "Chaque événement est unique : le tarif dépend du nombre de convives, du menu et du lieu. Demandez votre devis gratuit, réponse sous 24h.": "Jedes Event ist einzigartig: Der Preis hängt von Gästezahl, Menü und Ort ab. Fordere dein kostenloses Angebot an, Antwort in 24h.",
+      "On s'occupe du reste": "Wir kümmern uns um den Rest",
+      "Demandez votre devis gratuit": "Fordere dein kostenloses Angebot an",
+      "Réponse sous 24h · Sans engagement · Un menu sur-mesure pour votre événement": "Antwort in 24h · Unverbindlich · Ein individuelles Menü für euer Event",
+      "Nom & prénom *": "Vor- und Nachname *", "Téléphone *": "Telefon *",
+      "Date de l'événement": "Datum des Events", "Nombre de personnes": "Anzahl der Personen",
+      "Type d'événement": "Art des Events", "Choisir…": "Auswählen…",
+      "Mariage / Lendemain de mariage": "Hochzeit / Tag danach", "Professionnel": "Firmen", "Autre": "Andere",
+      "Dites-nous en plus": "Erzähl uns mehr", "Recevoir mon devis gratuit": "Mein kostenloses Angebot erhalten",
+      "Réponse sous 24h": "Antwort in 24h", "Devis 100% gratuit": "100% kostenloses Angebot",
+      "Une question rapide ? Appelez-nous au": "Eine kurze Frage? Ruf uns an unter",
+      "Ne pas remplir": "Nicht ausfüllen", "Email *": "E-Mail *", "vous@email.com": "du@email.com",
+      "Lieu, ambiance, budget indicatif, demandes particulières…": "Ort, Stimmung, ungefähres Budget, besondere Wünsche…",
+      "La carte · Élu meilleur burger de Normandie": "Die Karte · Bester Burger der Normandie",
+      "La carte": "Die Karte",
+      "Du fait maison, des produits bien choisis, des recettes généreuses — pour les viandards comme pour les végé. Compose ton burger et commande en ligne en 2 minutes.": "Hausgemacht, sorgfältig ausgewählte Produkte, großzügige Rezepte — für Fleischfans und Veggies. Stell deinen Burger zusammen und bestell online in 2 Minuten.",
+      "Commander en ligne": "Online bestellen", "Voir les burgers": "Zu den Burgern",
+      "Pain du boulanger": "Brot vom Bäcker", "Option végé": "Veggie-Option",
+      "Édition limitée": "Limitierte Edition", "La recette du moment": "Das Rezept des Moments",
+      "Nouveau · Édition limitée": "Neu · Limitierte Edition",
+      "Truite fumée fondante, avocat bien crémeux et pickles de radis rose faits maison, réveillés par une sauce fraîche cottage & herbes — ciboulette, menthe, aneth, citron vert et une pointe de piment d'Espelette. Coleslaw qui croque, pain brioché doré. Frais, vif, délicatement canaille : le burger qui te fait de l'œil.": "Zart schmelzende geräucherte Forelle, cremige Avocado und hausgemachte Pickles vom rosa Radieschen, belebt von einer frischen Cottage-Kräuter-Sauce — Schnittlauch, Minze, Dill, Limette und ein Hauch Espelette-Pfeffer. Knackiger Coleslaw, goldenes Brioche-Bun. Frisch, lebendig, herrlich frech: der Burger, der dir zuzwinkert.",
+      "Truite fumée": "Geräucherte Forelle", "Avocat": "Avocado", "Pickles de radis": "Radieschen-Pickles",
+      "Sauce cottage & herbes": "Cottage-Kräuter-Sauce", "Citron vert": "Limette",
+      "Les burgers": "Die Burger", "Une recette, une protéine au choix": "Ein Rezept, eine Protein-Wahl",
+      "Protéine au choix, cheddar, sauce crème, confit d'oignons, pickles de cornichons, salade.": "Protein nach Wahl, Cheddar, Rahmsauce, Zwiebelconfit, Gurken-Pickles, Salat.",
+      "Protéine au choix, camembert rôti, sauce calvados, pomme cuite, salade.": "Protein nach Wahl, gerösteter Camembert, Calvados-Sauce, gekochter Apfel, Salat.",
+      "Protéine au choix, chèvre, noix, sauce miel-moutarde, confit d'oignons, salade.": "Protein nach Wahl, Ziegenkäse, Walnüsse, Honig-Senf-Sauce, Zwiebelconfit, Salat.",
+      "Protéine au choix, mozzarella, crème de pesto, confit de tomate, oignons et câpres, salade.": "Protein nach Wahl, Mozzarella, Pesto-Creme, Tomatenconfit, Zwiebeln und Kapern, Salat.",
+      "Protéine au choix, chèvre, crème de chorizo, chips de chorizo, confit d'oignons, salade.": "Protein nach Wahl, Ziegenkäse, Chorizo-Creme, Chorizo-Chips, Zwiebelconfit, Salat.",
+      "La recette éphémère du chef. À découvrir au comptoir (ou en ligne selon la saison).": "Das kurzlebige Rezept des Küchenchefs. Entdecke es am Tresen (oder online, je nach Saison).",
+      "Choisis ta protéine": "Wähle dein Protein",
+      "Incluse — même prix, aucun supplément": "Inklusive — gleicher Preis, kein Aufpreis",
+      "Bœuf bourguignon": "Rind Bourguignon", "Mijoté maison": "Hausgeschmort",
+      "Bœuf normand": "Normannisches Rind", "Haché frais": "Frisch gehackt",
+      "Poulet frit": "Frittiertes Hähnchen", "Croustillant": "Knusprig",
+      "Végétarien": "Vegetarisch", "HappyVore · 100% végétal": "HappyVore · 100% pflanzlich",
+      "Gonfle ton burger": "Pimp deinen Burger", "Double viande": "Doppelt Fleisch", "Double fromage": "Doppelt Käse",
+      "Passe en menu": "Als Menü", "Frites maison + sauce, ou coleslaw": "Hausgemachte Pommes + Sauce, oder Coleslaw",
+      "Notre poutine revisitée à la française": "Unsere Poutine auf französische Art",
+      "1 protéine + 1 sauce au choix, sur un lit de frites maison.": "1 Protein + 1 Sauce nach Wahl, auf einem Bett aus hausgemachten Pommes.",
+      "2 protéines + 2 sauces au choix. Pour les bons vivants.": "2 Proteine + 2 Saucen nach Wahl. Für Genießer.",
+      "3 protéines + 3 sauces au choix. Le défi ultime.": "3 Proteine + 3 Saucen nach Wahl. Die ultimative Herausforderung.",
+      "Choisis tes protéines": "Wähle deine Proteine",
+      "Selon la taille — 1, 2 ou 3 au choix": "Je nach Größe — 1, 2 oder 3 zur Wahl",
+      "Saucisse de canard": "Entenwurst", "Fumée": "Geräuchert", "100% végétal": "100% pflanzlich",
+      "Choix de la sauce": "Sauce zur Wahl", "(servie sur les protéines)": "(über den Proteinen serviert)",
+      "Poivre": "Pfeffer", "Moutarde à l'ancienne": "Grobkörniger Senf",
+      "Sides": "Beilagen", "À côté ou à partager": "Als Beilage oder zum Teilen",
+      "Poulet frit maison, cheddar, sauce barbecue, pain brioché.": "Hausgemachtes Frittier-Hähnchen, Cheddar, Barbecue-Sauce, Brioche-Bun.",
+      "Frites maison": "Hausgemachte Pommes", "Salade coleslaw": "Coleslaw-Salat", "Cookie pur beurre": "Butter-Cookie",
+      "Menu enfant": "Kindermenü", "12,90 € · 1 plat au choix + une boisson": "12,90 € · 1 Gericht nach Wahl + ein Getränk",
+      "Burger Patatoune + frites": "Patatoune-Burger + Pommes",
+      "Poulet frit maison, cheddar, ketchup, pain brioché.": "Hausgemachtes Frittier-Hähnchen, Cheddar, Ketchup, Brioche-Bun.",
+      "ou": "oder", "Poulet frit + frites": "Frittiertes Hähnchen + Pommes",
+      "Poulet frit maison, servi avec des frites maison.": "Hausgemachtes Frittier-Hähnchen, serviert mit hausgemachten Pommes.",
+      "+ Boisson incluse —": "+ Getränk inklusive —",
+      "Sirop à l'eau (20 cl) : menthe, violette, grenadine ou pêche.": "Sirup mit Wasser (20 cl): Minze, Veilchen, Grenadine oder Pfirsich.",
+      "Sauces maison": "Hausgemachte Saucen", "Faites maison, pour tremper tes frites": "Hausgemacht, zum Dippen deiner Pommes",
+      "Les classiques": "Die Klassiker", "Marocaine": "Marokkanisch",
+      "Poivre +1 €": "Pfeffer +1 €", "Fondue au fromage": "Käsefondue", "(à saucer)": "(zum Dippen)",
+      "Boissons": "Getränke",
+      "Softs maison · bières du brasseur Ragnar · cidre de Normandie": "Hausgemachte Softdrinks · Biere vom Brauer Ragnar · Cidre aus der Normandie",
+      "Softs": "Softdrinks", "à emporter · 33 cl": "zum Mitnehmen · 33 cl",
+      "Mangue, citron vert, limonade.": "Mango, Limette, Limonade.", "Thé glacé maison": "Hausgemachter Eistee",
+      "Sirop au choix : menthe, violette, grenadine, pêche.": "Sirup nach Wahl: Minze, Veilchen, Grenadine, Pfirsich.",
+      "Sirop à l'eau": "Sirup mit Wasser",
+      "Bières & cidre": "Biere & Cidre", "brassées par Ragnar": "gebraut von Ragnar",
+      "blonde de soif": "spritziges Helles", "houblonnée": "hopfig",
+      "Cidre normand": "Normannischer Cidre", "brut 4,5°": "herb 4,5°", "Vin rouge": "Rotwein",
+      "Bouteille 22 €. L'abus d'alcool est dangereux pour la santé, à consommer avec modération.": "Flasche 22 €. Alkoholmissbrauch ist gesundheitsschädlich, in Maßen genießen.",
+      "Prix nets en euros, service compris (TVA incluse). Viandes d'origine Normandie & France, sélectionnées avec soin. Allergènes : demandez-nous, on vous renseigne avec plaisir.": "Nettopreise in Euro, Bedienung inbegriffen (inkl. MwSt.). Fleisch aus der Normandie & Frankreich, sorgfältig ausgewählt. Allergene: Frag uns, wir informieren dich gern.",
+      "Prêt à te régaler ?": "Bereit zu genießen?", "Commande ton burger": "Bestell deinen Burger", "en ligne": "online",
+      "Livraison ou à emporter · Petit Quevilly & Rouen centre-ville · C'est prêt en quelques minutes.": "Lieferung oder Mitnahme · Petit Quevilly & Rouen Zentrum · In wenigen Minuten fertig.",
+      "Commander maintenant": "Jetzt bestellen"
+    }
+  };
+
+  var LANGS = ['fr', 'en', 'es', 'de'];
+  var SKIP = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1 };
+
+  function norm(s) {
+    return s.replace(/ /g, ' ')
+            .replace(/[’‘ʼ`´]/g, "'")
+            .replace(/\s+/g, ' ').trim();
+  }
+
+  // dictionnaires normalisés
+  var NDICT = {};
+  LANGS.forEach(function (l) {
+    if (!DICT[l]) return;
+    NDICT[l] = {};
+    for (var k in DICT[l]) NDICT[l][norm(k)] = DICT[l][k];
+  });
+
+  var textNodes = null;   // [{node, fr}]
+  var attrTargets = null; // [{el, attr, fr}]
+
+  function cache() {
+    textNodes = [];
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (SKIP[n.parentNode.nodeName]) return NodeFilter.FILTER_REJECT;
+        if (!n.textContent.trim()) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var n; while ((n = w.nextNode())) textNodes.push({ node: n, fr: n.textContent });
+    attrTargets = [];
+    var add = function (sel, attr) {
+      document.querySelectorAll(sel).forEach(function (el) {
+        var v = el.getAttribute(attr);
+        if (v && v.trim()) attrTargets.push({ el: el, attr: attr, fr: v });
+      });
+    };
+    add('[placeholder]', 'placeholder');
+    add('[aria-label]', 'aria-label');
+  }
+
+  function apply(lang) {
+    if (LANGS.indexOf(lang) < 0) lang = 'fr';
+    if (!textNodes) cache();
+    var table = NDICT[lang]; // undefined pour 'fr'
+    textNodes.forEach(function (o) {
+      if (!table) { o.node.textContent = o.fr; return; }
+      var t = table[norm(o.fr)];
+      if (t == null) { o.node.textContent = o.fr; return; }
+      var lead = o.fr.match(/^\s*/)[0], trail = o.fr.match(/\s*$/)[0];
+      o.node.textContent = lead + t + trail;
+    });
+    attrTargets.forEach(function (a) {
+      if (!table) { a.el.setAttribute(a.attr, a.fr); return; }
+      var t = table[norm(a.fr)];
+      a.el.setAttribute(a.attr, t != null ? t : a.fr);
+    });
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('mp_lang', lang); } catch (e) {}
+    document.querySelectorAll('[data-lang-btn]').forEach(function (b) {
+      b.classList.toggle('is-active', b.getAttribute('data-lang-btn') === lang);
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang-btn') === lang ? 'true' : 'false');
+    });
+    // met à jour l'aperçu de chaque bouton toggle (drapeau + code)
+    document.querySelectorAll('.lang-switch').forEach(function (sw) {
+      var f = sw.querySelector('.lang-switch__toggle [data-lang-flag]');
+      var c = sw.querySelector('.lang-switch__toggle [data-lang-code]');
+      if (f) f.setAttribute('data-lang-flag', lang);
+      if (c) c.textContent = lang.toUpperCase();
+    });
+  }
+
+  function closeAll() {
+    document.querySelectorAll('.lang-switch.is-open').forEach(function (s) {
+      s.classList.remove('is-open');
+      var t = s.querySelector('[data-lang-toggle]');
+      if (t) t.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  window.MPI18N = { apply: apply, langs: LANGS };
+
+  function init() {
+    cache();
+    var saved = 'fr';
+    try { saved = localStorage.getItem('mp_lang') || 'fr'; } catch (e) {}
+    apply(saved);
+    // ouverture / fermeture du menu déroulant
+    document.querySelectorAll('[data-lang-toggle]').forEach(function (t) {
+      t.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var sw = t.closest('.lang-switch');
+        var willOpen = !sw.classList.contains('is-open');
+        closeAll();
+        if (willOpen) { sw.classList.add('is-open'); t.setAttribute('aria-expanded', 'true'); }
+      });
+    });
+    document.querySelectorAll('[data-lang-btn]').forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.getAttribute('data-lang-btn')); closeAll(); });
+    });
+    document.addEventListener('click', closeAll);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();

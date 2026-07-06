@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food truck événementiel à Rouen & Normandie — M. Patachon</title>
+  <meta name="description" content="Le food truck M. Patachon régale vos événements : mariage, séminaire, anniversaire, festival. Élu meilleur burger de Normandie, 100% fait maison. Devis gratuit sous 24h.">
+  <link rel="icon" href="assets/logo-header.png">
+  <link rel="preload" as="image" href="assets/photos/ft-scene.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home ftpage">
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo"><img src="assets/logo-header.png" alt="M. Patachon"></a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link">Accueil</a>
+        <a href="hors-les-murs.html" class="nav__link is-active">Food truck</a>
+        <a href="la-carte.html" class="nav__link">La Carte</a>
+        <div class="lang-switch lang-switch--nav" role="group" aria-label="Langue">
+          <button type="button" class="lang-switch__toggle" data-lang-toggle aria-haspopup="true" aria-expanded="false">
+            <span class="lang-flag" data-lang-flag="fr"></span><span data-lang-code>FR</span>
+            <svg class="lang-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="lang-switch__menu">
+            <button type="button" data-lang-btn="fr" class="is-active"><span class="lang-flag" data-lang-flag="fr"></span>Français</button>
+            <button type="button" data-lang-btn="en"><span class="lang-flag" data-lang-flag="en"></span>English</button>
+            <button type="button" data-lang-btn="es"><span class="lang-flag" data-lang-flag="es"></span>Español</button>
+            <button type="button" data-lang-btn="de"><span class="lang-flag" data-lang-flag="de"></span>Deutsch</button>
+          </div>
+        </div>
+      </nav>
+      <div class="header__cta">
+        <div class="lang-switch lang-switch--head" role="group" aria-label="Langue">
+          <button type="button" class="lang-switch__toggle" data-lang-toggle aria-haspopup="true" aria-expanded="false">
+            <span class="lang-flag" data-lang-flag="fr"></span><span data-lang-code>FR</span>
+            <svg class="lang-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="lang-switch__menu">
+            <button type="button" data-lang-btn="fr" class="is-active"><span class="lang-flag" data-lang-flag="fr"></span>Français</button>
+            <button type="button" data-lang-btn="en"><span class="lang-flag" data-lang-flag="en"></span>English</button>
+            <button type="button" data-lang-btn="es"><span class="lang-flag" data-lang-flag="es"></span>Español</button>
+            <button type="button" data-lang-btn="de"><span class="lang-flag" data-lang-flag="de"></span>Deutsch</button>
+          </div>
+        </div>
+        <a href="#devis" class="btn btn--white">Demander un devis</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- ============ HERO ============ -->
+    <section class="ftp-hero">
+      <div class="ftp-hero__bg" style="background-image:url('assets/photos/ft-scene.jpg')"></div>
+      <div class="ftp-hero__inner">
+        <p class="eyebrow">Food truck événementiel · Rouen &amp; Normandie</p>
+        <h1 class="ftp-hero__title">Le food truck qui régale vos événements</h1>
+        <p class="ftp-hero__sub">
+          Mariage, séminaire, anniversaire ou festival : on débarque avec le meilleur burger
+          de Normandie, notre camion et notre bonne humeur. Vous profitez, on s'occupe de tout.
+        </p>
+        <div class="ftp-hero__cta">
+          <a href="#devis" class="btn btn--white">Demander un devis gratuit <span class="arrow">→</span></a>
+          <a class="cta-phone cta-phone--light" href="tel:0780959883"><small>Ou appelle-nous</small><b>07 80 95 98 83</b></a>
+        </div>
+        <div class="ftp-trustline">
+          <span>Devis gratuit sous 24h</span>
+          <span>Sans engagement</span>
+          <span>100% fait maison</span>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ BANDE DE CONFIANCE / COMPTEURS ============ -->
+    <section class="section trust" style="padding:56px 0;">
+      <div class="container">
+        <div class="stats" style="margin-top:0;">
+          <div class="stat" data-reveal style="--i:0"><div class="stat__num">1ᵉʳ</div><div class="stat__label">Meilleur burger<br>de Normandie 2024</div></div>
+          <div class="stat" data-reveal style="--i:1"><div class="stat__num"><span data-count="100">0</span>%</div><div class="stat__label">Fait maison</div></div>
+          <div class="stat" data-reveal style="--i:2"><div class="stat__num"><span data-count="24">0</span>H</div><div class="stat__label">Réponse à ta demande</div></div>
+          <div class="stat" data-reveal style="--i:3"><div class="stat__num">0</div><div class="stat__label">Blabla, juste du bon</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OCCASIONS ============ -->
+    <section class="section section--white has-deco">
+      <span class="deco deco--float" data-parallax="0.18" style="width:min(30vw,340px);height:340px;top:-70px;right:-60px;background-image:url('assets/icons/patty.png');"></span>
+      <div class="container">
+        <p class="eyebrow" data-reveal>Pour qui ?</p>
+        <h2 class="title-lg" data-reveal style="--i:1;color:var(--marine)">Un food truck pour<br>tous vos événements</h2>
+        <div class="occasions">
+          <div class="occasion" data-reveal style="--i:0"><img src="assets/icons/burger.png" alt=""><h3>Mariage</h3><p>Un dîner ou un brunch qui change du traiteur classique. Vos invités s'en souviennent.</p></div>
+          <div class="occasion" data-reveal style="--i:1"><img src="assets/icons/drumstick.png" alt=""><h3>Lendemain de mariage</h3><p>Le format parfait, convivial et sans chichi, pour prolonger la fête en toute simplicité.</p></div>
+          <div class="occasion" data-reveal style="--i:2"><img src="assets/icons/friesbox.png" alt=""><h3>Séminaire &amp; entreprise</h3><p>Team building, inauguration, afterwork : on régale vos équipes et vos clients.</p></div>
+          <div class="occasion" data-reveal style="--i:3"><img src="assets/icons/patty.png" alt=""><h3>Anniversaire</h3><p>18, 30, 50 ans ou juste l'envie de se faire plaisir : on met l'ambiance et les burgers.</p></div>
+          <div class="occasion" data-reveal style="--i:4"><img src="assets/icons/fries.png" alt=""><h3>Festival &amp; marché</h3><p>Gros volumes, service rapide, qualité constante : on tient la cadence sans jamais bâcler.</p></div>
+          <div class="occasion" data-reveal style="--i:5"><img src="assets/icons/cocotte.png" alt=""><h3>Soirée privée</h3><p>Entre amis, en famille, pour une occasion spéciale : le camion vient à vous.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BANDEAU LE VRAI CAMION ============ -->
+    <section class="truck-band">
+      <div class="truck-band__img" data-parallax="0.12" style="background-image:url('assets/photos/ft-truck-1.jpg')"></div>
+      <div class="truck-band__cap">
+        <p class="eyebrow" data-reveal>Le vrai camion Patachon</p>
+        <h3 data-reveal style="--i:1">On installe tout, chez vous</h3>
+      </div>
+    </section>
+
+    <!-- ============ AU MENU / INCLUS ============ -->
+    <section class="section section--marine has-deco">
+      <span class="deco deco--float" data-parallax="-0.16" style="width:min(34vw,400px);height:400px;bottom:-90px;left:-80px;background-image:url('assets/icons/white/wheat.png');"></span>
+      <div class="container">
+        <div class="split__text" data-reveal style="max-width:820px;">
+          <p class="eyebrow">Au menu</p>
+          <h2 class="title-lg">Tout est compris,<br>vous n'avez qu'à profiter</h2>
+          <ul class="inc-list">
+            <li>Le burger signature, choisi ensemble selon votre événement</li>
+            <li>Les patates de Normandie rôties à l'ail, faites maison</li>
+            <li>Les cookies pur beurre, faits maison eux aussi</li>
+            <li>L'option végétarienne ou le bœuf effiloché à la bourguignonne</li>
+            <li>Le camion, l'équipe et le service — on installe et on gère tout</li>
+          </ul>
+          <a href="#devis" class="btn btn--white">Composer mon menu <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ POURQUOI NOUS ============ -->
+    <section class="section section--white">
+      <div class="container">
+        <p class="eyebrow" data-reveal>Pourquoi M. Patachon</p>
+        <h2 class="title-lg" data-reveal style="--i:1;color:var(--marine)">La différence Patachon</h2>
+        <div class="why-grid">
+          <div class="why-card" data-reveal style="--i:0"><img src="assets/icons/burger.png" alt=""><h3>Élu n°1 en Normandie</h3><p>Meilleur burger de Normandie 2024, primé en 2025. Vos invités sont entre de bonnes mains.</p></div>
+          <div class="why-card" data-reveal style="--i:1"><img src="assets/icons/wheat.png" alt=""><h3>Fait maison</h3><p>Bœuf, crème et pains de notre boulanger, des recettes maison, du goût. Pas de surgelé, pas de blabla.</p></div>
+          <div class="why-card" data-reveal style="--i:2"><img src="assets/icons/cocotte.png" alt=""><h3>Clé en main</h3><p>On s'occupe de tout : installation, service, propreté. Vous n'avez rien à gérer.</p></div>
+          <div class="why-card" data-reveal style="--i:3"><img src="assets/icons/drumstick.png" alt=""><h3>Une équipe qui régale</h3><p>De la bonne humeur, du sourire et le sens de la fête. On vient aussi mettre l'ambiance.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMMENT ÇA MARCHE ============ -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="ft-steps" data-reveal="zoom">
+          <div class="ft-steps__head"><h3>Comment ça marche</h3></div>
+          <div class="ft-steps__grid">
+            <div class="ft-step"><span class="ft-step__num">01</span><h4>Dis-nous tout</h4><p>Date, lieu, nombre de convives : remplis le devis en 2 minutes.</p></div>
+            <div class="ft-step"><span class="ft-step__num">02</span><h4>Devis sous 24h</h4><p>On te répond vite avec une offre claire et un menu sur-mesure.</p></div>
+            <div class="ft-step"><span class="ft-step__num">03</span><h4>On débarque</h4><p>Le jour J, le food truck s'installe et régale tout le monde.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TÉMOIGNAGES (à remplacer par de vrais avis clients) ============ -->
+    <section class="section section--white has-deco" style="padding-top:0;">
+      <span class="deco deco--float" data-parallax="0.16" style="width:min(26vw,300px);height:300px;bottom:-60px;right:-40px;background-image:url('assets/icons/patty.png');"></span>
+      <div class="container">
+        <p class="eyebrow" data-reveal>Ils nous ont fait confiance</p>
+        <h2 class="title-lg" data-reveal style="--i:1;color:var(--marine)">On a régalé leurs événements</h2>
+        <div class="testis">
+          <div class="testi" data-reveal style="--i:0">
+            <div class="testi__stars">★★★★★</div>
+            <p class="testi__quote">« Le food truck a fait un carton à notre mariage. Les invités en parlent encore, et le burger est juste incroyable. »</p>
+            <div class="testi__who">Camille &amp; Thomas<span>Mariage · 120 invités</span></div>
+          </div>
+          <div class="testi" data-reveal style="--i:1">
+            <div class="testi__stars">★★★★★</div>
+            <p class="testi__quote">« Séminaire réussi grâce à eux : service au top, produits maison et une équipe hyper sympa. On refait sans hésiter. »</p>
+            <div class="testi__who">Julie R.<span>Séminaire d'entreprise · 60 pers.</span></div>
+          </div>
+          <div class="testi" data-reveal style="--i:2">
+            <div class="testi__stars">★★★★★</div>
+            <p class="testi__quote">« Pour mes 30 ans je voulais du bon et du convivial. Mission accomplie, tout le monde s'est régalé. »</p>
+            <div class="testi__who">Karim B.<span>Anniversaire · 40 pers.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--marine has-deco">
+      <span class="deco deco--float" data-parallax="0.18" style="width:min(30vw,340px);height:340px;top:-70px;left:-70px;background-image:url('assets/icons/white/friesbox.png');"></span>
+      <div class="container">
+        <p class="eyebrow text-center" data-reveal style="justify-content:center;">Vous vous demandez…</p>
+        <h2 class="title-lg text-center" data-reveal style="--i:1">Questions fréquentes</h2>
+        <div class="faq" data-reveal style="--i:2">
+          <details class="faq-item" open><summary>Où vous déplacez-vous ?</summary><p>Rouen, sa métropole et toute la Normandie. Un peu plus loin ? Parlez-nous-en, on trouve toujours une solution.</p></details>
+          <details class="faq-item"><summary>À partir de combien de personnes ?</summary><p>Le food truck prend tout son sens à partir d'une trentaine de convives. Dites-nous votre nombre, on adapte l'offre.</p></details>
+          <details class="faq-item"><summary>Combien de temps à l'avance réserver ?</summary><p>Le plus tôt possible, surtout en pleine saison (mai à septembre). Mais tentez toujours : on fait au mieux pour vous caler.</p></details>
+          <details class="faq-item"><summary>Y a-t-il une option végétarienne ?</summary><p>Oui, un burger végé gourmand est prévu. On s'adapte aussi à vos contraintes et allergies.</p></details>
+          <details class="faq-item"><summary>Combien ça coûte ?</summary><p>Chaque événement est unique : le tarif dépend du nombre de convives, du menu et du lieu. Demandez votre devis gratuit, réponse sous 24h.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMULAIRE DE DEVIS (canal de vente) ============ -->
+    <section class="section section--marine" id="devis">
+      <div class="container devis-wrap">
+        <p class="eyebrow text-center" data-reveal style="justify-content:center;">On s'occupe du reste</p>
+        <h2 class="title-lg text-center" data-reveal style="--i:1">Demandez votre devis gratuit</h2>
+        <p class="mono text-center" data-reveal style="--i:2;max-width:640px;margin:0 auto 32px;">Réponse sous 24h · Sans engagement · Un menu sur-mesure pour votre événement</p>
+
+        <!-- Formspree : remplacez l'ID par votre endpoint (https://formspree.io/) -->
+        <form class="form" action="https://formspree.io/f/xxxxxxx" method="POST" data-reveal style="--i:3">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis food truck — M. Patachon">
+          <div class="hp" aria-hidden="true"><label>Ne pas remplir<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+
+          <div>
+            <label for="email">Email *</label>
+            <input id="email" type="email" name="email" placeholder="vous@email.com" required>
+          </div>
+          <div>
+            <label for="nom">Nom &amp; prénom *</label>
+            <input id="nom" type="text" name="nom" placeholder="Camille Dupont" required>
+          </div>
+          <div>
+            <label for="tel">Téléphone *</label>
+            <input id="tel" type="tel" name="telephone" placeholder="06 12 34 56 78" required>
+          </div>
+          <div>
+            <label for="date">Date de l'événement</label>
+            <input id="date" type="date" name="date">
+          </div>
+          <div>
+            <label for="pers">Nombre de personnes</label>
+            <input id="pers" type="number" min="1" name="nombre_personnes" placeholder="80">
+          </div>
+          <div>
+            <label for="type">Type d'événement</label>
+            <select id="type" name="type_evenement">
+              <option value="">Choisir…</option>
+              <option>Mariage / Lendemain de mariage</option>
+              <option>Anniversaire</option>
+              <option>Séminaire</option>
+              <option>Festival</option>
+              <option>Professionnel</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="infos">Dites-nous en plus</label>
+            <textarea id="infos" name="infos" placeholder="Lieu, ambiance, budget indicatif, demandes particulières…"></textarea>
+          </div>
+          <div class="full">
+            <button type="submit" class="btn btn--white">Recevoir mon devis gratuit <span class="arrow">→</span></button>
+            <div class="devis-reassure">
+              <span>Réponse sous 24h</span><span>Sans engagement</span><span>Devis 100% gratuit</span>
+            </div>
+          </div>
+        </form>
+
+        <p class="mono text-center" style="margin-top:30px;">Une question rapide ? Appelez-nous au <a href="tel:0780959883" style="color:#fff;font-weight:700;">07 80 95 98 83</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer2">
+    <div class="container">
+      <div class="footer2__top">
+        <div class="footer2__brand">
+          <img class="footer2__logo" src="assets/logo-blanc.png" alt="M. Patachon">
+          <p class="footer2__sign">C'est bon, c'est maison, c'est Patachon</p>
+        </div>
+        <div class="footer2__cols">
+          <div class="footer2__col">
+            <h4>Menu</h4>
+            <a href="index.html">Accueil</a>
+            <a href="hors-les-murs.html">Food truck</a>
+            <a href="la-carte.html">La Carte</a>
+            <a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener">Commander</a>
+          </div>
+          <div class="footer2__col">
+            <h4>Nous trouver</h4>
+            <a href="https://share.google/FiSBdYS68avdDfdCx" target="_blank" rel="noopener">Petit Quevilly<br>7 Rue Hélène Boucher</a>
+            <a href="https://share.google/U9talpZV67t7AD55W" target="_blank" rel="noopener">Rouen Centre-ville<br>66 Rue de la Vicomté</a>
+          </div>
+          <div class="footer2__col">
+            <h4>Contact</h4>
+            <a href="tel:0780959883">07 80 95 98 83 · Food truck</a>
+            <a href="mailto:patacrew@m-patachon.fr">patacrew@m-patachon.fr</a>
+            <a href="https://www.instagram.com/m.patachon/" target="_blank" rel="noopener">Instagram @m.patachon</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer2__bar">
+        <span>© <span id="year"></span> M. Patachon — Rouen. Tous droits réservés.</span>
+        <div class="footer2__links">
+          <a href="#">Programme fidélité</a>
+          <a href="#">Mentions légales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CTA sticky mobile -->
+  <div class="sticky-cta">
+    <a href="tel:0780959883" class="btn btn--outline-white sticky-cta__call" aria-label="Appeler">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.3 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.3 1l-2.2 2.2z"/></svg>
+    </a>
+    <a href="#devis" class="btn btn--white sticky-cta__devis">Demander un devis <span class="arrow">→</span></a>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
