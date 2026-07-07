@@ -29,6 +29,14 @@ if (stickyCta) {
   const toggleCta = () => stickyCta.classList.toggle('is-shown', window.scrollY > 560);
   toggleCta();
   window.addEventListener('scroll', toggleCta, { passive: true });
+
+  // masque le CTA flottant quand le footer est visible (ne recouvre plus le programme fidélité)
+  const footerEl = document.querySelector('.footer2');
+  if (footerEl && 'IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      stickyCta.classList.toggle('is-hidden', entries[0].isIntersecting);
+    }, { rootMargin: '0px 0px -8% 0px' }).observe(footerEl);
+  }
 }
 
 /* ---- Choix du restaurant à appeler (page carte) -------------------------- */

@@ -496,11 +496,7 @@ body.home .page { padding-top: 0; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* Indice de scroll */
-.hero__scroll {
-  position: absolute; z-index: 3; bottom: 22px; left: 50%; transform: translateX(-50%);
-  width: 26px; height: 42px; border: 2px solid rgba(255,255,255,.7); border-radius: 14px;
-  opacity: 0; animation: heroUp .8s var(--ease) 1.2s forwards;
-}
+.hero__scroll { display: none; }  /* indicateur "souris" retiré (retour client) */
 .hero__scroll::before {
   content: ''; position: absolute; top: 8px; left: 50%; width: 4px; height: 8px;
   background: #fff; border-radius: 4px; transform: translateX(-50%);
@@ -1365,5 +1361,39 @@ body.home .page { padding-top: 0; }
 @media (max-width: 860px) {
   .kids { grid-template-columns: 1fr; gap: 14px; }
   .kids__or { font-size: 1.2rem; padding: 4px; }
-  .hero__scroll { display: none; }   /* évite le chevauchement avec le contenu du hero sur mobile */
 }
+
+/* ==========================================================================
+   RETOURS CLIENT — hovers non trompeurs (éléments non cliquables)
+   ========================================================================== */
+/* Tags occasion (mariage, séminaire…) : pas de survol "bouton" */
+.ft-tags span:hover { background: transparent; color: var(--marine); border-color: rgba(19,55,125,.3); }
+/* Étapes "comment ça marche" : plus d'effet de lévitation */
+.ft-step:hover { transform: none; background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.14); }
+/* Cartes occasion (page food truck) : plus d'effet cliquable */
+.occasion:hover { transform: none; border-color: rgba(19,55,125,.14); box-shadow: none; }
+/* Photos décoratives : plus de zoom au survol (ne suggère plus un lien) */
+.media-frame:hover img,
+.photo-marquee figure:hover img,
+.resto2:hover .resto2__media img,
+.momo:hover .momo__media img,
+.momo-feature:hover .momo-feature__media img { transform: none; }
+/* La barre/pill flottante ne doit pas recouvrir le footer */
+.sticky-cta.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(150%); }
+
+/* Compteurs "À propos" cliquables (ancres internes) */
+.stat--link { text-decoration: none; color: inherit; cursor: pointer; transition: transform .3s var(--ease); }
+.stat--link .stat__label { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; text-decoration-color: rgba(255,255,255,.4); transition: text-decoration-color .3s var(--ease); }
+.stat--link:hover { transform: translateY(-4px); }
+.stat--link:hover .stat__label { text-decoration-color: #fff; }
+
+/* CTA devis à la fin de "Comment ça marche" */
+.ft-steps__cta { display: flex; justify-content: center; margin-top: clamp(30px, 4vw, 44px); }
+
+/* Page Mentions légales / contenu texte */
+.legal { max-width: 820px; margin: 0 auto; }
+.legal h2 { font-family: var(--font-title); font-weight: 900; text-transform: uppercase; color: var(--marine); font-size: 1.15rem; letter-spacing: .3px; margin: 34px 0 10px; }
+.legal p, .legal li { font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--grey); margin: 0 0 10px; }
+.legal ul { padding-left: 20px; margin: 0 0 10px; }
+.legal a { color: var(--marine); }
+.legal .legal__todo { background: rgba(19,55,125,.06); border-left: 3px solid var(--marine); padding: 4px 12px; border-radius: 4px; font-style: italic; }
