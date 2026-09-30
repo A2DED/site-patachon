@@ -1,5 +1,25 @@
-# M. Patachon — redirections (Cloudflare Pages)
-# Ancienne page "hors les murs" -> "food truck"
-/hors-les-murs       /food-truck   301
-/hors-les-murs.html  /food-truck   301
-/hors-les-murs/      /food-truck   301
+# M. Patachon — redirections (Cloudflare)
+# Anciennes adresses (ancien site WordPress, flyers, QR codes) -> nouvelles pages
+/hors-les-murs        /food-truck   301
+/hors-les-murs.html   /food-truck   301
+/hors-les-murs/       /food-truck   301
+/evenementiel         /food-truck   301
+/evenementiel/        /food-truck   301
+/evenement            /food-truck   301
+/evenement/           /food-truck   301
+/events               /food-truck   301
+/events/              /food-truck   301
+/devis                /food-truck#devis   301
+/devis/               /food-truck#devis   301
+/contact              /food-truck#devis   301
+/contact/             /food-truck#devis   301
+/accueil              /             301
+/accueil/             /             301
+/home                 /             301
+/home/                /             301
+/carte                /la-carte     301
+/carte/               /la-carte     301
+/menu                 /la-carte     301
+/menu/                /la-carte     301
+/commander            https://bonne-nouvelle.marketplace.dood.com/fr   302
+/commander/           https://bonne-nouvelle.marketplace.dood.com/fr   302
