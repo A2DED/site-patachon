@@ -1,0 +1,5 @@
+# M. Patachon — redirections (Cloudflare Pages)
+# Ancienne page "hors les murs" -> "food truck"
+/hors-les-murs       /food-truck   301
+/hors-les-murs.html  /food-truck   301
+/hors-les-murs/      /food-truck   301

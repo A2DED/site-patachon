@@ -1,0 +1,7 @@
+# M. Patachon — cache des fichiers (Cloudflare Pages)
+/assets/*
+  Cache-Control: public, max-age=2592000
+/*.css
+  Cache-Control: public, max-age=604800
+/*.js
+  Cache-Control: public, max-age=604800

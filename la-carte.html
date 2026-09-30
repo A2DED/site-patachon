@@ -6,8 +6,46 @@
   <title>La Carte — Burgers fait maison à Rouen | M. Patachon</title>
   <meta name="description" content="La carte M. Patachon : burgers fait maison, le Chirac (poutine revisitée), sides, menu enfant, boissons. Élu meilleur burger de Normandie. Commande en ligne.">
   <link rel="icon" href="assets/logo-header.png">
+  <link rel="canonical" href="https://m-patachon.fr/la-carte.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="La Carte — Burgers fait maison à Rouen | M. Patachon">
+  <meta property="og:description" content="Burgers faits maison dès 13 €, recette du moment, sides, menu enfant, boissons locales. Livraison et à emporter à Rouen.">
+  <meta property="og:url" content="https://m-patachon.fr/la-carte.html">
+  <meta property="og:image" content="https://m-patachon.fr/assets/photos/knife-cut.jpg">
+  <meta property="og:locale" content="fr_FR">
   <link rel="preload" as="image" href="assets/photos/knife-cut.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=13">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": "La Carte M. Patachon",
+    "url": "https://m-patachon.fr/la-carte.html",
+    "inLanguage": "fr",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection", "name": "Recette du moment",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "Le Mexichon (édition limitée)", "description": "Confit de tomates et poivrons, pickles de jalapeño, sauce fromages frais au jalapeño haché, coriandre et épices mexicaines, viande au choix (ou veggie), cheddar maturé fondant, pain du boulanger.", "offers": { "@type": "Offer", "price": "15.00", "priceCurrency": "EUR" } }
+        ]
+      },
+      {
+        "@type": "MenuSection", "name": "Les burgers",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "Le Classique", "description": "Protéine au choix, cheddar, sauce crème, confit d'oignons, pickles, salade.", "offers": { "@type": "Offer", "price": "13.00", "priceCurrency": "EUR" } },
+          { "@type": "MenuItem", "name": "Le Normand", "offers": { "@type": "Offer", "price": "13.00", "priceCurrency": "EUR" } },
+          { "@type": "MenuItem", "name": "Le Chèvre-miel", "offers": { "@type": "Offer", "price": "13.00", "priceCurrency": "EUR" } },
+          { "@type": "MenuItem", "name": "Le Pestochon", "offers": { "@type": "Offer", "price": "15.00", "priceCurrency": "EUR" } },
+          { "@type": "MenuItem", "name": "Le Patachizo", "offers": { "@type": "Offer", "price": "15.00", "priceCurrency": "EUR" } }
+        ]
+      },
+      {
+        "@type": "MenuSection", "name": "Menu enfant",
+        "hasMenuItem": [ { "@type": "MenuItem", "name": "Menu enfant (1 plat + 1 boisson + frites)", "offers": { "@type": "Offer", "price": "12.90", "priceCurrency": "EUR" } } ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="home ftpage">
 
@@ -19,7 +57,7 @@
       <a href="index.html" class="header__logo"><img src="assets/logo-header.png" alt="M. Patachon"></a>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav__link">Accueil</a>
-        <a href="hors-les-murs.html" class="nav__link">Food truck</a>
+        <a href="food-truck.html" class="nav__link">Food truck</a>
         <a href="la-carte.html" class="nav__link is-active">La Carte</a>
         <div class="lang-switch lang-switch--nav" role="group" aria-label="Langue">
           <button type="button" class="lang-switch__toggle" data-lang-toggle aria-haspopup="true" aria-expanded="false">
@@ -68,6 +106,7 @@
         <div class="ftp-hero__cta">
           <a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener" class="btn btn--white">Commander en ligne <span class="arrow">→</span></a>
           <a href="#burgers" class="btn btn--outline-white">Voir les burgers</a>
+          <a href="https://patachon-dashboard.vercel.app/menu/allergenes/5c3d3d1d-c3cc-460f-bac0-c1832483015d" target="_blank" rel="noopener" class="btn btn--outline-white">Allergènes <span class="arrow">↗</span></a>
         </div>
         <div class="ftp-trustline"><span>100% fait maison</span><span>Pain du boulanger</span><span>Option végé</span></div>
       </div>
@@ -83,22 +122,21 @@
         <article class="momo-feature" data-reveal="zoom">
           <div class="momo-feature__media">
             <span class="momo-feature__tag">Nouveau · Édition limitée</span>
-            <img src="assets/photos/recette-moment.jpg" alt="Le Fraîchon — truite fumée, avocat, pickles de radis">
+            <img src="assets/photos/recette-moment.jpg" alt="Le Mexichon — confit de tomates et poivrons, pickles de jalapeño, cheddar maturé">
           </div>
           <div class="momo-feature__body">
             <div class="momo-feature__row">
-              <h3 class="momo-feature__name">Le Fraîchon</h3>
+              <h3 class="momo-feature__name">Le Mexichon</h3>
               <span class="momo-feature__price">15 €</span>
             </div>
             <p class="momo-feature__desc">
-              Truite fumée fondante, avocat bien crémeux et pickles de radis rose faits maison,
-              réveillés par une sauce fraîche cottage &amp; herbes — ciboulette, menthe, aneth, citron vert
-              et une pointe de piment d'Espelette. Coleslaw qui croque, pain brioché doré.
-              Frais, vif, délicatement canaille : le burger qui te fait de l'œil.
+              Confit de tomates et poivrons, pickles de jalapeño, sauce fromages frais au jalapeño haché,
+              coriandre &amp; épices mexicaines, viande au choix (ou veggie), cheddar maturé fondant,
+              et un pain toujours aussi boulanger.
             </p>
             <div class="momo-feature__ings">
-              <span>Truite fumée</span><span>Avocat</span><span>Pickles de radis</span>
-              <span>Sauce cottage &amp; herbes</span><span>Citron vert</span><span>Piment d'Espelette</span><span>Coleslaw</span>
+              <span>Confit tomates &amp; poivrons</span><span>Pickles de jalapeño</span><span>Sauce fromages frais</span>
+              <span>Coriandre &amp; épices mexicaines</span><span>Viande au choix (ou veggie)</span><span>Cheddar maturé</span><span>Pain du boulanger</span>
             </div>
             <a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener" class="btn btn--white">Commander <span class="arrow">→</span></a>
           </div>
@@ -372,7 +410,7 @@
           <div class="footer2__col">
             <h4>Menu</h4>
             <a href="index.html">Accueil</a>
-            <a href="hors-les-murs.html">Food truck</a>
+            <a href="food-truck.html">Food truck</a>
             <a href="la-carte.html">La Carte</a>
             <a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener">Commander</a>
           </div>
@@ -425,7 +463,7 @@
     </div>
   </div>
 
-  <script src="i18n.js"></script>
-  <script src="script.js"></script>
+  <script src="i18n.js?v=13"></script>
+  <script src="script.js?v=14"></script>
 </body>
 </html>

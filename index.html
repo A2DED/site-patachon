@@ -6,8 +6,74 @@
   <title>Restaurant de Burger à Rouen — M. Patachon, Burger maison</title>
   <meta name="description" content="Découvrez nos burgers à la façon Patachon. Burgers de bons vivants, à emporter ou en livraison. Restaurant de burger à Rouen.">
   <link rel="icon" href="assets/logo-header.png">
+  <link rel="canonical" href="https://m-patachon.fr/">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="M. Patachon — Burger maison à Rouen, élu meilleur burger de Normandie">
+  <meta property="og:description" content="Burgers 100% faits maison à Rouen. 2 restaurants (Petit Quevilly & Centre-ville), livraison, à emporter, food truck événementiel.">
+  <meta property="og:url" content="https://m-patachon.fr/">
+  <meta property="og:image" content="https://m-patachon.fr/assets/photos/bite-1.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="M. Patachon">
   <link rel="preload" as="image" href="assets/photos/bite-1.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=13">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Restaurant",
+        "@id": "https://m-patachon.fr/#petit-quevilly",
+        "name": "M. Patachon — Petit Quevilly",
+        "image": "https://m-patachon.fr/assets/resto-rive-gauche.jpg",
+        "url": "https://m-patachon.fr/",
+        "telephone": "+33953459193",
+        "servesCuisine": ["Burger", "Fait maison"],
+        "priceRange": "€€",
+        "address": { "@type": "PostalAddress", "streetAddress": "7 Rue Hélène Boucher", "addressLocality": "Le Petit-Quevilly", "postalCode": "76140", "addressRegion": "Normandie", "addressCountry": "FR" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "19:00", "closes": "22:30" }
+        ],
+        "hasDeliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModeOwnFleet", "http://purl.org/goodrelations/v1#DeliveryModePickUp"],
+        "menu": "https://m-patachon.fr/la-carte.html",
+        "acceptsReservations": "False",
+        "award": "Élu meilleur burger de Normandie 2024, primé en 2025"
+      },
+      {
+        "@type": "Restaurant",
+        "@id": "https://m-patachon.fr/#rouen-centre",
+        "name": "M. Patachon — Rouen Centre-ville",
+        "image": "https://m-patachon.fr/assets/resto-rive-droite.jpg",
+        "url": "https://m-patachon.fr/",
+        "telephone": "+33955938278",
+        "servesCuisine": ["Burger", "Fait maison"],
+        "priceRange": "€€",
+        "address": { "@type": "PostalAddress", "streetAddress": "66 Rue de la Vicomté", "addressLocality": "Rouen", "postalCode": "76000", "addressRegion": "Normandie", "addressCountry": "FR" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:45", "closes": "14:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "19:00", "closes": "22:30" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:45", "closes": "14:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "19:00", "closes": "23:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:45", "closes": "14:30" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "19:00", "closes": "22:30" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "19:00", "closes": "22:30" }
+        ],
+        "menu": "https://m-patachon.fr/la-carte.html",
+        "acceptsReservations": "False",
+        "award": "Élu meilleur burger de Normandie 2024, primé en 2025"
+      },
+      {
+        "@type": "FoodEstablishment",
+        "@id": "https://m-patachon.fr/#foodtruck",
+        "name": "M. Patachon — Food truck événementiel",
+        "url": "https://m-patachon.fr/food-truck.html",
+        "telephone": "+33780959883",
+        "servesCuisine": ["Burger", "Fait maison"],
+        "areaServed": "Rouen, Normandie",
+        "description": "Food truck pour mariages, séminaires, anniversaires et festivals en Normandie. Devis gratuit sous 72h."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="home">
 
@@ -19,7 +85,7 @@
       <a href="index.html" class="header__logo"><img src="assets/logo-header.png" alt="M. Patachon"></a>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav__link is-active">Accueil</a>
-        <a href="hors-les-murs.html" class="nav__link">Food truck</a>
+        <a href="food-truck.html" class="nav__link">Food truck</a>
         <a href="la-carte.html" class="nav__link">La Carte</a>
         <div class="lang-switch lang-switch--nav" role="group" aria-label="Langue">
           <button type="button" class="lang-switch__toggle" data-lang-toggle aria-haspopup="true" aria-expanded="false">
@@ -167,8 +233,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
                 <div class="resto2__hours-txt">
                   <span class="resto2__hours-lead">Ouvert le soir</span>
-                  <span>Mar–Sam · 19h00–22h30</span>
-                  <span>Dim · 19h00–22h00 <span class="resto2__hours-off">· Lun fermé</span></span>
+                  <span>Mar–Dim · 19h00–22h30 <span class="resto2__hours-off">· Lun fermé</span></span>
+                  <span class="resto2__hours-note">Cuisines fermées 15 min avant</span>
                 </div>
               </div>
               <a class="resto2__phone" href="tel:0953459193">09 53 45 91 93</a>
@@ -188,8 +254,11 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
                 <div class="resto2__hours-txt">
                   <span class="resto2__hours-lead">Midi &amp; soir</span>
-                  <span>Mar–Sam · 11h45–14h00 · 19h00–22h30</span>
-                  <span>Dim · 19h00–22h30 <span class="resto2__hours-off">· Lun fermé</span></span>
+                  <span>Lun–Jeu · 11h45–14h00 · 19h00–22h30</span>
+                  <span>Ven · 11h45–14h00 · 19h00–23h00</span>
+                  <span>Sam · 11h45–14h30 · 19h00–22h30</span>
+                  <span>Dim · 19h00–22h30</span>
+                  <span class="resto2__hours-note">Cuisines fermées 15 min avant</span>
                 </div>
               </div>
               <a class="resto2__phone" href="tel:0955938278">09 55 93 82 78</a>
@@ -221,7 +290,7 @@
               <span>Anniversaire</span><span>Festival</span><span>Pro</span>
             </div>
             <div class="ft-cta">
-              <a href="hors-les-murs.html" class="btn btn--marine">Demander un devis <span class="arrow">→</span></a>
+              <a href="food-truck.html" class="btn btn--marine">Demander un devis <span class="arrow">→</span></a>
               <a class="ft-phone" href="tel:0780959883"><small>Ou appelle-nous</small><b>07 80 95 98 83</b></a>
             </div>
           </div>
@@ -312,7 +381,7 @@
           <div class="footer2__col">
             <h4>Menu</h4>
             <a href="index.html">Accueil</a>
-            <a href="hors-les-murs.html">Food truck</a>
+            <a href="food-truck.html">Food truck</a>
             <a href="la-carte.html">La Carte</a>
             <a href="https://bonne-nouvelle.marketplace.dood.com/fr" target="_blank" rel="noopener">Commander</a>
           </div>
@@ -365,7 +434,7 @@
     </div>
   </div>
 
-  <script src="i18n.js"></script>
-  <script src="script.js"></script>
+  <script src="i18n.js?v=13"></script>
+  <script src="script.js?v=14"></script>
 </body>
 </html>
