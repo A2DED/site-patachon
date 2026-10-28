@@ -357,9 +357,8 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
   if (!form) return;
   const CRM_URL = 'https://ohrkkzlqufeatfqijlrt.supabase.co/functions/v1/ft-lead';
   const $ = (id) => document.getElementById(id);
-  const type = $('ftq-type'), recipe = $('ftq-recipe'), date = $('ftq-date');
+  const type = $('ftq-type'), date = $('ftq-date');
   const proBoxes = form.querySelectorAll('.ftq-pro');
-  const otherBox = form.querySelector('.ftq-recipe-other');
   const done = document.querySelector('.ftq-done');
   const errBox = form.querySelector('.ftq-error');
   const btn = form.querySelector('button[type="submit"]');
@@ -377,10 +376,8 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
     proBoxes.forEach((b) => show(b, pro));
     $('ftq-structure').required = pro;
   }
-  function syncRecipe() { show(otherBox, recipe.value === 'Autre recette'); }
   type.addEventListener('change', syncPro);
-  recipe.addEventListener('change', syncRecipe);
-  syncPro(); syncRecipe();
+  syncPro();
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -398,7 +395,7 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
       start_time: v('ftq-start'), end_time: v('ftq-end'),
       street: v('ftq-street'), postcode: v('ftq-cp'), city: v('ftq-city'),
       guests: parseInt(v('ftq-guests'), 10),
-      formula: v('ftq-formula'), recipe: recipe.value, recipe_other: v('ftq-recipe-other'),
+      formula: v('ftq-formula'), recipe: v('ftq-recipe'),
       budget: v('ftq-budget'),
       name: v('ftq-name'), email: v('ftq-email'), phone: v('ftq-tel'),
       structure: v('ftq-structure'), siren: v('ftq-siren'),
