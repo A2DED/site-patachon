@@ -1506,16 +1506,6 @@ body.home .page { padding-top: 0; }
 .ftp-table thead th { font-family: var(--font-title); font-weight: 800; font-size: 1rem; }
 .ftp-table tbody th { text-align: left; font-weight: 700; }
 
-/* Exemples */
-.ftp-examples { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
-.ftp-example { border: 2px solid var(--marine); border-radius: 26px; padding: 28px 24px; display: flex; flex-direction: column; }
-.ftp-example h3 { font-family: var(--font-title); font-weight: 900; text-transform: uppercase; color: var(--marine); font-size: 1.25rem; margin: 0 0 6px; }
-.ftp-example__ctx { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .5px; font-size: .76rem; line-height: 1.5; margin: 0 0 12px; }
-.ftp-example .ftp-lines { margin-bottom: 12px; }
-.ftp-example__total { margin: auto 0 0; padding-top: 14px; border-top: 2px solid var(--marine); color: var(--marine); display: flex; flex-direction: column; gap: 4px; }
-.ftp-example__total strong { font-family: var(--font-huge); font-weight: 900; font-size: 1.8rem; line-height: 1; }
-.ftp-example__total small { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .5px; font-size: .74rem; }
-
 /* Conditions */
 .ftp-bullets { display: grid; gap: 12px; }
 .ftp-bullets li { position: relative; padding-left: 22px; font-family: var(--font-body); font-size: 1rem; line-height: 1.55; }
@@ -1547,7 +1537,7 @@ body.home .page { padding-top: 0; }
 .ftq-done[hidden] { display: none; }
 
 @media (max-width: 860px) {
-  .ftp-formules, .ftp-examples, .ftp-duo { grid-template-columns: 1fr; }
+  .ftp-formules, .ftp-duo { grid-template-columns: 1fr; }
   .ftp-lines li { flex-direction: column; gap: 2px; }
   .ftp-lines b { text-align: left; max-width: none; }
   .ftp-equation span { padding: 6px 12px; }
