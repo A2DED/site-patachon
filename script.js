@@ -392,7 +392,6 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
       event_type: type.value,
       event_date: date.value,
       service_slot: slot ? slot.value.toLowerCase() : '',
-      start_time: v('ftq-start'), end_time: v('ftq-end'),
       street: v('ftq-street'), postcode: v('ftq-cp'), city: v('ftq-city'),
       guests: parseInt(v('ftq-guests'), 10),
       formula: 'Classique', recipe: v('ftq-recipe'),
