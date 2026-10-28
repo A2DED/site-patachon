@@ -18,6 +18,7 @@ automatiquement sur **m-patachon.fr** par Cloudflare (Workers, ~1 min). Pas d'au
 | `index.html` | Accueil (à propos, restaurants, food truck, recrutement, Instagram) |
 | `la-carte.html` | La carte + bloc « La recette du moment » (section `momo-feature`) |
 | `food-truck.html` | Page événementiel + formulaire de devis (Formspree) |
+| `supabase/functions/ft-lead/` | Copie de la fonction Supabase (projet « DASHBOARD RESTO ») qui crée chaque demande de devis dans le CRM food truck (`ft_clients` + `ft_deals`). Appelée par `script.js` en plus de Formspree. Non publiée sur le site. |
 | `mentions-legales.html` | Mentions légales |
 | `styles.css`, `script.js` | Styles et interactions communs à toutes les pages |
 | `i18n.js` | Traductions EN / ES / DE (clé = texte français exact) |

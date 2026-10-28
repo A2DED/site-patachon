@@ -1442,3 +1442,113 @@ body.home .page { padding-top: 0; }
 .legal ul { padding-left: 20px; margin: 0 0 10px; }
 .legal a { color: var(--marine); }
 .legal .legal__todo { background: rgba(19,55,125,.06); border-left: 3px solid var(--marine); padding: 4px 12px; border-radius: 4px; font-style: italic; }
+
+/* ==========================================================================
+   PAGE FOOD TRUCK — politique commerciale (tarifs, formules, conditions)
+   ========================================================================== */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+.ftp-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; margin: 0 0 16px; }
+.ftp-price strong { font-family: var(--font-huge); font-weight: 900; font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1; letter-spacing: -.5px; }
+.ftp-price small { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; font-size: .74rem; opacity: .75; }
+
+/* "Votre prestation = forfait + formules" */
+.ftp-equation { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 6px 0 34px;
+  font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; font-size: clamp(.82rem, 1.3vw, 1rem); }
+.ftp-equation span { border: 2px solid rgba(255,255,255,.5); border-radius: var(--radius-pill); padding: 8px 16px; }
+.ftp-equation b { font-family: var(--font-title); font-size: 1.5rem; }
+
+.ftp-forfait { max-width: 820px; background: rgba(255,255,255,.06); border: 2px solid #fff; border-radius: 28px; padding: clamp(26px, 4vw, 42px); }
+.ftp-forfait__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 20px; margin-bottom: 12px; }
+.ftp-forfait h3 { font-family: var(--font-title); font-weight: 900; text-transform: uppercase; font-size: clamp(1.3rem, 2.4vw, 1.8rem); margin: 0; }
+.ftp-forfait .ftp-price { margin: 0; }
+.ftp-forfait > p { font-family: var(--font-body); font-size: 1.08rem; line-height: 1.55; margin: 0 0 18px; }
+.ftp-forfait .inc-list { margin-bottom: 0; }
+
+/* Cartes formules */
+.ftp-formules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 40px; }
+.ftp-formule { position: relative; background: #fff; border: 2px solid rgba(19,55,125,.16); border-radius: 26px; padding: 30px 28px; color: var(--grey); }
+.ftp-formule h3 { font-family: var(--font-title); font-weight: 900; text-transform: uppercase; color: var(--marine); font-size: clamp(1.2rem, 2vw, 1.5rem); margin: 0 0 10px; }
+.ftp-formule .ftp-price { color: var(--marine); }
+.ftp-formule p { font-family: var(--font-body); font-size: 1rem; line-height: 1.55; margin: 0 0 10px; }
+.ftp-formule p:last-child { margin-bottom: 0; }
+.ftp-formule .ftp-formule__sub { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; font-size: .74rem; color: var(--marine); margin: -4px 0 10px; }
+.ftp-formule--star { background: var(--marine); border-color: var(--marine); color: #fff; }
+.ftp-formule--star h3, .ftp-formule--star .ftp-price { color: #fff; }
+.ftp-formule__tag { display: inline-block; margin-bottom: 14px; background: #fff; color: var(--marine); border-radius: var(--radius-pill);
+  padding: 6px 14px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; font-size: .68rem; font-weight: 700; }
+
+/* Blocs (options, minimum, déplacement, conditions) */
+.ftp-block { margin-top: 44px; background: rgba(19,55,125,.04); border: 2px solid rgba(19,55,125,.12); border-radius: 26px; padding: clamp(24px, 3.4vw, 36px); }
+.ftp-block__title { font-family: var(--font-title); font-weight: 900; text-transform: uppercase; color: var(--marine); font-size: clamp(1.2rem, 2vw, 1.55rem); margin: 0 0 14px; }
+.ftp-block p { font-family: var(--font-body); font-size: 1rem; line-height: 1.55; margin: 0 0 14px; }
+.ftp-block p:last-child { margin-bottom: 0; }
+.ftp-block--dark { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.3); color: #fff; margin-top: 0; }
+.ftp-block--dark .ftp-block__title { color: #fff; }
+.ftp-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+.ftp-duo .ftp-block { margin-top: 0; }
+#conditions .ftp-duo { margin-top: 36px; }
+.ftp-note { font-family: var(--font-mono); font-size: .8rem !important; letter-spacing: .3px; opacity: .8; }
+
+/* Lignes libellé / prix */
+.ftp-lines { display: grid; margin: 0 0 14px; }
+.ftp-lines li { display: flex; justify-content: space-between; align-items: baseline; gap: 6px 18px; padding: 12px 0;
+  border-bottom: 1px dashed rgba(19,55,125,.25); font-family: var(--font-body); font-size: 1rem; line-height: 1.4; }
+.ftp-lines li:last-child { border-bottom: 0; }
+.ftp-lines b { font-family: var(--font-mono); font-weight: 700; color: var(--marine); text-align: right; font-size: .9rem; flex-shrink: 0; max-width: 55%; }
+.ftp-block--dark .ftp-lines li { border-bottom-color: rgba(255,255,255,.25); }
+.ftp-block--dark .ftp-lines b { color: #fff; }
+
+/* Tableau minimums */
+.ftp-table-wrap { overflow-x: auto; margin: 0 0 10px; }
+.ftp-table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .5px; font-size: .85rem; }
+.ftp-table th, .ftp-table td { padding: 12px 10px; text-align: center; border-bottom: 1px solid rgba(255,255,255,.22); }
+.ftp-table thead th { font-family: var(--font-title); font-weight: 800; font-size: 1rem; }
+.ftp-table tbody th { text-align: left; font-weight: 700; }
+
+/* Exemples */
+.ftp-examples { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+.ftp-example { border: 2px solid var(--marine); border-radius: 26px; padding: 28px 24px; display: flex; flex-direction: column; }
+.ftp-example h3 { font-family: var(--font-title); font-weight: 900; text-transform: uppercase; color: var(--marine); font-size: 1.25rem; margin: 0 0 6px; }
+.ftp-example__ctx { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .5px; font-size: .76rem; line-height: 1.5; margin: 0 0 12px; }
+.ftp-example .ftp-lines { margin-bottom: 12px; }
+.ftp-example__total { margin: auto 0 0; padding-top: 14px; border-top: 2px solid var(--marine); color: var(--marine); display: flex; flex-direction: column; gap: 4px; }
+.ftp-example__total strong { font-family: var(--font-huge); font-weight: 900; font-size: 1.8rem; line-height: 1; }
+.ftp-example__total small { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .5px; font-size: .74rem; }
+
+/* Conditions */
+.ftp-bullets { display: grid; gap: 12px; }
+.ftp-bullets li { position: relative; padding-left: 22px; font-family: var(--font-body); font-size: 1rem; line-height: 1.55; }
+.ftp-bullets li::before { content: ''; position: absolute; left: 2px; top: .55em; width: 8px; height: 8px; border-radius: 50%; background: var(--marine); }
+.ftp-allnote { margin: 24px 0 0; padding: 18px 22px; border-radius: 18px; background: var(--marine); color: #fff; font-family: var(--font-body); font-size: 1.02rem; line-height: 1.5; }
+.ftp-outro { margin: 34px auto 0; color: var(--marine); }
+
+/* Formulaire de demande de devis */
+.ftq .ftq-group { margin: 14px 0 -4px; font-family: var(--font-title); font-weight: 900; text-transform: uppercase; font-size: 1.15rem; letter-spacing: .5px;
+  padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.25); }
+.ftq .ftq-group:first-of-type { margin-top: 0; }
+.ftq-label { display: block; font-family: var(--font-mono); text-transform: uppercase; font-size: .75rem; letter-spacing: 1px; margin-bottom: 6px; }
+.ftq-radios { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.form .ftq-radio, .form .ftq-check { margin: 0; cursor: pointer; text-transform: none; letter-spacing: 0; font-size: 1rem; }
+.ftq-radio { position: relative; }
+.ftq-radio input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.ftq-radio span { display: flex; align-items: center; justify-content: center; height: 52px; border: 2px solid rgba(255,255,255,.4); border-radius: var(--radius-pill);
+  font-family: var(--font-title); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; transition: background .2s, color .2s, border-color .2s; }
+.ftq-radio input:checked + span { background: #fff; color: var(--marine); border-color: #fff; }
+.ftq-radio input:focus-visible + span { outline: 3px solid #fff; outline-offset: 3px; }
+.ftq-check { display: flex !important; align-items: center; gap: 12px; font-family: var(--font-body) !important; }
+.form .ftq-check input { width: 22px; height: 22px; padding: 0; flex-shrink: 0; accent-color: #fff; }
+.ftq:has(#ftq-bill-same:checked) .ftq-billing { display: none; }
+.form input[type="date"], .form input[type="time"] { min-height: 52px; color-scheme: dark; }
+.ftq [hidden], .ftq[hidden] { display: none !important; }
+.ftq-error { margin: 14px 0 0; padding: 12px 16px; border-radius: 14px; background: #fff; color: var(--marine); font-family: var(--font-body); font-weight: 700; }
+.ftq-done { max-width: 640px; margin: 0 auto; text-align: center; border: 2px solid #fff; border-radius: 26px; padding: 34px 26px; }
+.ftq-done p { margin: 0; font-family: var(--font-title); font-weight: 900; text-transform: uppercase; font-size: clamp(1.2rem, 2.6vw, 1.7rem); line-height: 1.25; }
+.ftq-done[hidden] { display: none; }
+
+@media (max-width: 860px) {
+  .ftp-formules, .ftp-examples, .ftp-duo { grid-template-columns: 1fr; }
+  .ftp-lines li { flex-direction: column; gap: 2px; }
+  .ftp-lines b { text-align: left; max-width: none; }
+  .ftp-equation span { padding: 6px 12px; }
+}

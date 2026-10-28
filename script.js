@@ -347,3 +347,81 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
     }
   }, true);
 })();
+
+/* ---- Formulaire de devis food truck : champs conditionnels + double envoi --
+   1) Formspree (e-mail, comme avant) ; 2) CRM food truck du dashboard
+   (Supabase « DASHBOARD RESTO », fonction ft-lead → ft_clients + ft_deals).
+   Sans JavaScript, le formulaire part normalement vers Formspree. ---------- */
+(function () {
+  const form = document.getElementById('ftqForm');
+  if (!form) return;
+  const CRM_URL = 'https://ohrkkzlqufeatfqijlrt.supabase.co/functions/v1/ft-lead';
+  const $ = (id) => document.getElementById(id);
+  const type = $('ftq-type'), recipe = $('ftq-recipe'), date = $('ftq-date');
+  const proBoxes = form.querySelectorAll('.ftq-pro');
+  const otherBox = form.querySelector('.ftq-recipe-other');
+  const done = document.querySelector('.ftq-done');
+  const errBox = form.querySelector('.ftq-error');
+  const btn = form.querySelector('button[type="submit"]');
+
+  // Dates passées interdites (jour de Paris)
+  try { date.min = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris' }).format(new Date()); } catch (e) {}
+
+  const show = (box, on) => {
+    box.hidden = !on;
+    box.querySelectorAll('input').forEach((i) => { i.disabled = !on; });
+  };
+  function syncPro() {
+    const opt = type.options[type.selectedIndex];
+    const pro = !!(opt && opt.hasAttribute('data-pro'));
+    proBoxes.forEach((b) => show(b, pro));
+    $('ftq-structure').required = pro;
+  }
+  function syncRecipe() { show(otherBox, recipe.value === 'Autre recette'); }
+  type.addEventListener('change', syncPro);
+  recipe.addEventListener('change', syncRecipe);
+  syncPro(); syncRecipe();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (btn.disabled) return;
+    const v = (id) => ($(id) && !$(id).disabled ? $(id).value.trim() : '');
+    const slot = form.querySelector('input[name="Moment du service"]:checked');
+    const billSame = $('ftq-bill-same').checked;
+    const fd = new FormData(form);
+    if (billSame) fd.delete('Adresse de facturation');
+    const lead = {
+      _gotcha: (form.querySelector('[name="_gotcha"]') || {}).value || '',
+      event_type: type.value,
+      event_date: date.value,
+      service_slot: slot ? slot.value.toLowerCase() : '',
+      start_time: v('ftq-start'), end_time: v('ftq-end'),
+      street: v('ftq-street'), postcode: v('ftq-cp'), city: v('ftq-city'),
+      guests: parseInt(v('ftq-guests'), 10),
+      formula: v('ftq-formula'), recipe: recipe.value, recipe_other: v('ftq-recipe-other'),
+      budget: v('ftq-budget'),
+      name: v('ftq-name'), email: v('ftq-email'), phone: v('ftq-tel'),
+      structure: v('ftq-structure'), siren: v('ftq-siren'),
+      billing_same: billSame, billing_address: billSame ? '' : v('ftq-billing'),
+      message: v('ftq-msg')
+    };
+    const label = btn.innerHTML;
+    btn.disabled = true; btn.textContent = '…';
+    errBox.hidden = true;
+    const ok = (r) => r.status === 'fulfilled' && r.value.ok;
+    Promise.allSettled([
+      fetch(form.action, { method: 'POST', body: fd, headers: { Accept: 'application/json' } }),
+      fetch(CRM_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead) })
+    ]).then(function (res) {
+      if (ok(res[0]) || ok(res[1])) {
+        form.hidden = true;
+        done.hidden = false;
+        done.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+        if (typeof window.gtag === 'function') window.gtag('event', 'devis_food_truck', { type: lead.event_type, convives: lead.guests });
+      } else {
+        errBox.hidden = false;
+        btn.disabled = false; btn.innerHTML = label;
+      }
+    });
+  });
+})();
