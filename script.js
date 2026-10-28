@@ -395,7 +395,7 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
       start_time: v('ftq-start'), end_time: v('ftq-end'),
       street: v('ftq-street'), postcode: v('ftq-cp'), city: v('ftq-city'),
       guests: parseInt(v('ftq-guests'), 10),
-      formula: v('ftq-formula'), recipe: v('ftq-recipe'),
+      formula: 'Classique', recipe: v('ftq-recipe'),
       budget: v('ftq-budget'),
       name: v('ftq-name'), email: v('ftq-email'), phone: v('ftq-tel'),
       structure: v('ftq-structure'), siren: v('ftq-siren'),

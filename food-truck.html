@@ -299,6 +299,7 @@
              En plus, script.js envoie chaque demande dans le CRM food truck du dashboard (Supabase, fonction ft-lead). -->
         <form class="form ftq" id="ftqForm" action="https://formspree.io/f/mrewwvkl" method="POST" data-reveal style="--i:3">
           <input type="hidden" name="_subject" value="Nouvelle demande de devis food truck — M. Patachon">
+          <input type="hidden" name="Formule" value="Classique">
           <div class="hp" aria-hidden="true"><label>Ne pas remplir<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
 
           <h3 class="full ftq-group">Votre événement</h3>
@@ -351,18 +352,8 @@
             <input id="ftq-guests" type="number" name="Nombre de convives" min="1" step="1" inputmode="numeric" placeholder="60" required>
           </div>
           <div>
-            <label for="ftq-formula">Formule envisagée</label>
-            <select id="ftq-formula" name="Formule envisagée">
-              <option value="">Choisir…</option>
-              <option value="Classique">Classique</option>
-              <option value="Gourmande">Gourmande</option>
-              <option value="Signature">Signature</option>
-              <option value="Je ne sais pas encore">Je ne sais pas encore</option>
-            </select>
-          </div>
-          <div>
-            <label for="ftq-recipe">Recette souhaitée</label>
-            <select id="ftq-recipe" name="Recette souhaitée">
+            <label for="ftq-recipe">Protéine au choix</label>
+            <select id="ftq-recipe" name="Protéine au choix">
               <option value="">Choisir…</option>
               <option value="Bœuf bourguignon">Bœuf bourguignon</option>
               <option value="Végétarien">Végétarien</option>
@@ -499,7 +490,7 @@
     <a href="#devis" class="btn btn--white sticky-cta__devis">Demander un devis <span class="arrow">→</span></a>
   </div>
 
-  <script src="i18n.js?v=17"></script>
-  <script src="script.js?v=16"></script>
+  <script src="i18n.js?v=18"></script>
+  <script src="script.js?v=17"></script>
 </body>
 </html>
