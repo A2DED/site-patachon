@@ -18,7 +18,7 @@ const EVENT_TYPES = [
 ];
 const PRO_TYPES = ["Repas d'entreprise / séminaire", "Association / comité des fêtes"];
 const FORMULAS = ["Classique", "Gourmande", "Signature", "Je ne sais pas encore"];
-const RECIPES = ["Bœuf bourguignon", "Végétarien", "Autre recette"];
+const RECIPES = ["Bœuf bourguignon", "Végétarien", "Les deux (bœuf bourguignon et végétarien)", "Autre recette"];
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const PHONE_RE = /^(?:(?:\+|00)33[\s.-]?(?:\(0\)[\s.-]?)?|0)[1-9](?:[\s.-]?\d{2}){4}$/;
@@ -80,7 +80,7 @@ Deno.serve(async (req) => {
     city: str(b.city, 120),
     guests: Number(b.guests),
     formula: str(b.formula, 40),
-    recipe: str(b.recipe, 40),
+    recipe: str(b.recipe, 60),
     recipeOther: str(b.recipe_other, 200),
     budget: str(b.budget, 200),
     name: str(b.name, 150),
