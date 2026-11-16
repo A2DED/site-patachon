@@ -7,6 +7,10 @@
 
   var DICT = {
     en: {
+      // — Bandeau fermeture temporaire rive gauche —
+      "Petit-Quevilly fermé pendant 3 semaines": "Petit-Quevilly closed for 3 weeks",
+      "· On reste ouvert à Rouen centre-ville !": "· We're still open in Rouen city centre!",
+      "Fermé temporairement · 3 semaines": "Temporarily closed · 3 weeks",
       // — Food truck : politique commerciale & formulaire de devis —
       "Le food truck M. Patachon vient régaler vos invités : burgers faits maison, frites fraîches de Normandie et bonne humeur. On arrive, on cuisine sur place, on sert, on range. Vous n'avez plus qu'à profiter.": "The M. Patachon food truck comes to treat your guests: homemade burgers, fresh Normandy fries and good vibes. We arrive, cook on site, serve and clean up. All you have to do is enjoy.",
       "Votre demande": "Your request",
@@ -322,6 +326,10 @@
     },
 
     es: {
+      // — Bandeau fermeture temporaire rive gauche —
+      "Petit-Quevilly fermé pendant 3 semaines": "Petit-Quevilly cerrado durante 3 semanas",
+      "· On reste ouvert à Rouen centre-ville !": "· ¡Seguimos abiertos en el centro de Rouen!",
+      "Fermé temporairement · 3 semaines": "Cerrado temporalmente · 3 semanas",
       // — Food truck : politique commerciale & formulaire de devis —
       "Le food truck M. Patachon vient régaler vos invités : burgers faits maison, frites fraîches de Normandie et bonne humeur. On arrive, on cuisine sur place, on sert, on range. Vous n'avez plus qu'à profiter.": "El food truck M. Patachon viene a deleitar a tus invitados: hamburguesas caseras, patatas fritas frescas de Normandía y buen rollo. Llegamos, cocinamos in situ, servimos y recogemos. Tú solo tienes que disfrutar.",
       "Votre demande": "Tu solicitud",
@@ -629,6 +637,10 @@
     },
 
     de: {
+      // — Bandeau fermeture temporaire rive gauche —
+      "Petit-Quevilly fermé pendant 3 semaines": "Petit-Quevilly 3 Wochen geschlossen",
+      "· On reste ouvert à Rouen centre-ville !": "· In der Innenstadt von Rouen haben wir weiter geöffnet!",
+      "Fermé temporairement · 3 semaines": "Vorübergehend geschlossen · 3 Wochen",
       // — Food truck : politique commerciale & formulaire de devis —
       "Le food truck M. Patachon vient régaler vos invités : burgers faits maison, frites fraîches de Normandie et bonne humeur. On arrive, on cuisine sur place, on sert, on range. Vous n'avez plus qu'à profiter.": "Der M. Patachon Foodtruck verwöhnt eure Gäste: hausgemachte Burger, frische Pommes aus der Normandie und gute Laune. Wir kommen, kochen vor Ort, servieren und räumen auf. Ihr müsst nur noch genießen.",
       "Votre demande": "Eure Anfrage",

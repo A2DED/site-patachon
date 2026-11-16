@@ -1542,3 +1542,26 @@ body.home .page { padding-top: 0; }
   .ftp-lines b { text-align: left; max-width: none; }
   .ftp-equation span { padding: 6px 12px; }
 }
+
+/* ---- Bandeau info (fermeture temporaire) — retirer la classe has-notice du <body> + le bloc .notice-bar pour l'enlever */
+:root { --notice-h: 38px; }
+.notice-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1001;
+  height: var(--notice-h); display: flex; align-items: center; justify-content: center;
+  padding: 0 16px; background: #fff; color: var(--marine); text-align: center;
+  font-family: var(--font-mono); font-size: .78rem; line-height: 1.2; letter-spacing: .3px;
+}
+.notice-bar p { margin: 0; }
+.notice-bar strong { font-family: var(--font-title); font-weight: 800; text-transform: uppercase; letter-spacing: .8px; }
+body.has-notice { padding-top: var(--notice-h); }
+body.has-notice .header { top: var(--notice-h); }
+@media (max-width: 600px) {
+  :root { --notice-h: 52px; }
+  .notice-bar { font-size: .7rem; }
+  .notice-bar span { display: block; }
+}
+.resto2__closed {
+  margin: 0; padding: 6px 14px; border-radius: var(--radius-pill);
+  background: #fff; color: var(--marine);
+  font-family: var(--font-title); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: .78rem;
+}
