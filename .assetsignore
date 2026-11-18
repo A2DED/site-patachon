@@ -4,3 +4,6 @@ README.md
 .git
 .github
 supabase
+.agents
+.claude
+skills-lock.json

@@ -11,6 +11,7 @@ automatiquement sur **m-patachon.fr** par Cloudflare (Workers, ~1 min). Pas d'au
 - Après chaque modif de texte visible, mettre à jour les traductions dans `i18n.js` (voir plus bas).
 - Ne jamais toucher à l'action du formulaire Formspree (`https://formspree.io/f/mrewwvkl`).
 - Répondre à l'utilisateur en français, ton simple, et lui dire que le site sera à jour en ~1 min.
+- Modern Web Guidance est installé : s'en servir pour tout travail d'interface.
 
 ## Fichiers
 | Fichier | Rôle |
