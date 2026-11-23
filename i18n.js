@@ -145,7 +145,7 @@
       "Demander un devis": "Request a quote", "Itinéraire": "Directions",
       "Ou appelle-nous": "Or call us",
       // — Horaires —
-      "Ouvert le soir": "Open evenings", "Midi & soir": "Lunch & dinner",
+      "Ouvert le soir": "Open evenings", "Horaires habituels": "Usual hours", "Midi & soir": "Lunch & dinner",
       "Mar–Sam · 19h00–22h30": "Tue–Sat · 19:00–22:30",
       "Mar–Dim · 19h00–22h30": "Tue–Sun · 19:00–22:30",
       "Dim · 19h00–22h00": "Sun · 19:00–22:00", "· Lun fermé": "· Mon closed",
@@ -321,7 +321,7 @@
       "Bouteille 22 €. L'abus d'alcool est dangereux pour la santé, à consommer avec modération.": "Bottle €22. Alcohol abuse is dangerous for your health, consume in moderation.",
       "Prix nets en euros, service compris (TVA incluse). Viandes d'origine Normandie & France, sélectionnées avec soin. Allergènes : demandez-nous, on vous renseigne avec plaisir.": "Net prices in euros, service included (VAT included). Meats sourced from Normandy & France, carefully selected. Allergens: ask us, we're happy to help.",
       "Prêt à te régaler ?": "Ready to treat yourself?", "Commande ton burger": "Order your burger", "en ligne": "online",
-      "Livraison ou à emporter · Petit Quevilly & Rouen centre-ville · C'est prêt en quelques minutes.": "Delivery or takeaway · Petit Quevilly & Rouen city centre · Ready in a few minutes.",
+      "Livraison ou à emporter · Rouen centre-ville · C'est prêt en quelques minutes.": "Delivery or takeaway · Rouen city centre · Ready in a few minutes.",
       "Commander maintenant": "Order now"
     },
 
@@ -462,7 +462,7 @@
       "Appeler un restaurant": "Llamar a un restaurante", "Appeler": "Llamar", "Fermer": "Cerrar",
       "Demander un devis": "Pedir presupuesto", "Itinéraire": "Cómo llegar",
       "Ou appelle-nous": "O llámanos",
-      "Ouvert le soir": "Abierto por la noche", "Midi & soir": "Mediodía y noche",
+      "Ouvert le soir": "Abierto por la noche", "Horaires habituels": "Horario habitual", "Midi & soir": "Mediodía y noche",
       "Mar–Sam · 19h00–22h30": "Mar–Sáb · 19:00–22:30",
       "Mar–Dim · 19h00–22h30": "Mar–Dom · 19:00–22:30",
       "Dim · 19h00–22h00": "Dom · 19:00–22:00", "· Lun fermé": "· Lun cerrado",
@@ -632,7 +632,7 @@
       "Bouteille 22 €. L'abus d'alcool est dangereux pour la santé, à consommer avec modération.": "Botella 22 €. El abuso de alcohol es peligroso para la salud, consúmase con moderación.",
       "Prix nets en euros, service compris (TVA incluse). Viandes d'origine Normandie & France, sélectionnées avec soin. Allergènes : demandez-nous, on vous renseigne avec plaisir.": "Precios netos en euros, servicio incluido (IVA incluido). Carnes de origen Normandía y Francia, seleccionadas con cuidado. Alérgenos: pregúntanos, te informamos con gusto.",
       "Prêt à te régaler ?": "¿Listo para darte un festín?", "Commande ton burger": "Pide tu hamburguesa", "en ligne": "online",
-      "Livraison ou à emporter · Petit Quevilly & Rouen centre-ville · C'est prêt en quelques minutes.": "A domicilio o para llevar · Petit Quevilly y Rouen centro · Listo en unos minutos.",
+      "Livraison ou à emporter · Rouen centre-ville · C'est prêt en quelques minutes.": "A domicilio o para llevar · Rouen centro · Listo en unos minutos.",
       "Commander maintenant": "Pedir ahora"
     },
 
@@ -773,7 +773,7 @@
       "Appeler un restaurant": "Ein Restaurant anrufen", "Appeler": "Anrufen", "Fermer": "Schließen",
       "Demander un devis": "Angebot anfordern", "Itinéraire": "Route",
       "Ou appelle-nous": "Oder ruf uns an",
-      "Ouvert le soir": "Abends geöffnet", "Midi & soir": "Mittags & abends",
+      "Ouvert le soir": "Abends geöffnet", "Horaires habituels": "Übliche Öffnungszeiten", "Midi & soir": "Mittags & abends",
       "Mar–Sam · 19h00–22h30": "Di–Sa · 19:00–22:30",
       "Mar–Dim · 19h00–22h30": "Di–So · 19:00–22:30",
       "Dim · 19h00–22h00": "So · 19:00–22:00", "· Lun fermé": "· Mo geschlossen",
@@ -943,7 +943,7 @@
       "Bouteille 22 €. L'abus d'alcool est dangereux pour la santé, à consommer avec modération.": "Flasche 22 €. Alkoholmissbrauch ist gesundheitsschädlich, in Maßen genießen.",
       "Prix nets en euros, service compris (TVA incluse). Viandes d'origine Normandie & France, sélectionnées avec soin. Allergènes : demandez-nous, on vous renseigne avec plaisir.": "Nettopreise in Euro, Bedienung inbegriffen (inkl. MwSt.). Fleisch aus der Normandie & Frankreich, sorgfältig ausgewählt. Allergene: Frag uns, wir informieren dich gern.",
       "Prêt à te régaler ?": "Bereit zu genießen?", "Commande ton burger": "Bestell deinen Burger", "en ligne": "online",
-      "Livraison ou à emporter · Petit Quevilly & Rouen centre-ville · C'est prêt en quelques minutes.": "Lieferung oder Mitnahme · Petit Quevilly & Rouen Zentrum · In wenigen Minuten fertig.",
+      "Livraison ou à emporter · Rouen centre-ville · C'est prêt en quelques minutes.": "Lieferung oder Mitnahme · Rouen Zentrum · In wenigen Minuten fertig.",
       "Commander maintenant": "Jetzt bestellen"
     }
   };

@@ -1101,6 +1101,9 @@ body.home .page { padding-top: 0; }
   transition: transform .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease);
 }
 .call-sheet__opt:hover, .call-sheet__opt:active { transform: translateY(-3px); background: var(--marine); border-color: var(--marine); color: #fff; }
+.call-sheet__opt--off { opacity: .55; cursor: default; }
+.call-sheet__opt--off:hover, .call-sheet__opt--off:active { transform: none; background: none; border-color: rgba(19,55,125,.16); color: var(--marine); }
+.call-sheet__opt--off .call-sheet__opt-num { font-size: .7rem; text-transform: uppercase; color: #c23b3b; }
 .call-sheet__opt-info { display: flex; flex-direction: column; gap: 3px; }
 .call-sheet__opt-name { font-family: var(--font-title); font-weight: 800; text-transform: uppercase; font-size: .9rem; letter-spacing: .3px; line-height: 1.1; }
 .call-sheet__opt-sub { font-family: var(--font-body); font-size: .82rem; opacity: .7; }

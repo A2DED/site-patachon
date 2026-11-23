@@ -235,7 +235,7 @@
               <div class="resto2__hours">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
                 <div class="resto2__hours-txt">
-                  <span class="resto2__hours-lead">Ouvert le soir</span>
+                  <span class="resto2__hours-lead">Horaires habituels</span>
                   <span>Mar–Dim · 19h00–22h30 <span class="resto2__hours-off">· Lun fermé</span></span>
                   <span class="resto2__hours-note">Cuisines fermées 15 min avant</span>
                 </div>
@@ -426,10 +426,11 @@
       <button type="button" class="call-sheet__close" aria-label="Fermer" data-call-close>&times;</button>
       <span class="call-sheet__kicker">Un burger à emporter ?</span>
       <h3 id="callSheetTitle">Quel resto appeler ?</h3>
-      <a href="tel:0953459193" class="call-sheet__opt">
+      <!-- Fermeture temporaire : à la réouverture, remettre <a href="tel:0953459193" class="call-sheet__opt"> + le numéro 09 53 45 91 93 -->
+      <div class="call-sheet__opt call-sheet__opt--off" aria-disabled="true">
         <span class="call-sheet__opt-info"><span class="call-sheet__opt-name">Petit Quevilly</span><span class="call-sheet__opt-sub">7 Rue Hélène Boucher</span></span>
-        <span class="call-sheet__opt-num">09 53 45 91 93</span>
-      </a>
+        <span class="call-sheet__opt-num">Fermé temporairement</span>
+      </div>
       <a href="tel:0955938278" class="call-sheet__opt">
         <span class="call-sheet__opt-info"><span class="call-sheet__opt-name">Rouen Centre-ville</span><span class="call-sheet__opt-sub">66 Rue de la Vicomté</span></span>
         <span class="call-sheet__opt-num">09 55 93 82 78</span>
