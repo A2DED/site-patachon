@@ -1130,6 +1130,9 @@ body.home .page { padding-top: 0; }
 .rstatus-soon { color: #c9781a; }
 .rstatus-closed { color: #c23b3b; }
 .order-opt:hover .order-opt__status, .order-opt:active .order-opt__status { color: #fff; opacity: .92; }
+.order-opt--off { opacity: .6; cursor: default; }
+.order-opt--off:hover, .order-opt--off:active { transform: none; background: none; border-color: rgba(19,55,125,.16); color: var(--marine); box-shadow: none; }
+.order-opt--off:hover .order-opt__status { color: #c23b3b; opacity: 1; }
 .order-opt__go { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-title); font-weight: 800; text-transform: uppercase; letter-spacing: .8px; font-size: .78rem; white-space: nowrap; flex: 0 0 auto; }
 .order-sheet__note { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .5px; font-size: .6rem; opacity: .5; margin: 16px 0 0; text-align: center; line-height: 1.5; }
 @media (min-width: 861px) { .order-sheet { align-items: center; } .order-sheet__panel { margin-bottom: 0; } }

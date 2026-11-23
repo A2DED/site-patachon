@@ -250,7 +250,8 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
   // Horaires en minutes depuis minuit (0=dim … 6=sam). 11h45=705, 14h00=840,
   // 14h30=870, 19h00=1140, 22h30=1350, 23h00=1380.
   const RESTOS = [
-    { name: 'Petit Quevilly', addr: '7 Rue Hélène Boucher',
+    // tempClosed: true → affiché « Fermé temporairement », non cliquable (repasser à false à la réouverture)
+    { name: 'Petit Quevilly', addr: '7 Rue Hélène Boucher', tempClosed: true,
       url: MARKET + '/shops/street-food/m-patachon-rouen-rive-gauche',
       hours: { 0:[[1140,1350]], 1:[], 2:[[1140,1350]], 3:[[1140,1350]], 4:[[1140,1350]], 5:[[1140,1350]], 6:[[1140,1350]] } },
     { name: 'Rouen Centre-ville', addr: '66 Rue de la Vicomté',
@@ -258,10 +259,10 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
       hours: { 0:[[1140,1350]], 1:[[705,840],[1140,1350]], 2:[[705,840],[1140,1350]], 3:[[705,840],[1140,1350]], 4:[[705,840],[1140,1350]], 5:[[705,840],[1140,1380]], 6:[[705,870],[1140,1350]] } }
   ];
   const T = {
-    fr: { kicker:'Commander en ligne', title:'Quel restaurant ?', open:'Ouvert', closed:'Fermé', closes:'ferme à', opens:'ouvre à', opensDay:'ouvre', soon:'ferme bientôt', go:'Commander', modes:['Livraison','À emporter'], note:'Redirection vers notre service de commande en ligne', days:['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'] },
-    en: { kicker:'Order online', title:'Which restaurant?', open:'Open', closed:'Closed', closes:'closes at', opens:'opens at', opensDay:'opens', soon:'closing soon', go:'Order', modes:['Delivery','Takeaway'], note:'You will be redirected to our online ordering service', days:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'] },
-    es: { kicker:'Pedir online', title:'¿Qué restaurante?', open:'Abierto', closed:'Cerrado', closes:'cierra a las', opens:'abre a las', opensDay:'abre', soon:'cierra pronto', go:'Pedir', modes:['Entrega','Para llevar'], note:'Serás redirigido a nuestro servicio de pedidos online', days:['dom.','lun.','mar.','mié.','jue.','vie.','sáb.'] },
-    de: { kicker:'Online bestellen', title:'Welches Restaurant?', open:'Geöffnet', closed:'Geschlossen', closes:'schließt um', opens:'öffnet um', opensDay:'öffnet', soon:'schließt bald', go:'Bestellen', modes:['Lieferung','Zum Mitnehmen'], note:'Weiterleitung zu unserem Online-Bestellservice', days:['So.','Mo.','Di.','Mi.','Do.','Fr.','Sa.'] }
+    fr: { kicker:'Commander en ligne', title:'Quel restaurant ?', open:'Ouvert', closed:'Fermé', tempClosed:'Fermé temporairement', closes:'ferme à', opens:'ouvre à', opensDay:'ouvre', soon:'ferme bientôt', go:'Commander', modes:['Livraison','À emporter'], note:'Redirection vers notre service de commande en ligne', days:['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'] },
+    en: { kicker:'Order online', title:'Which restaurant?', open:'Open', closed:'Closed', tempClosed:'Temporarily closed', closes:'closes at', opens:'opens at', opensDay:'opens', soon:'closing soon', go:'Order', modes:['Delivery','Takeaway'], note:'You will be redirected to our online ordering service', days:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'] },
+    es: { kicker:'Pedir online', title:'¿Qué restaurante?', open:'Abierto', closed:'Cerrado', tempClosed:'Cerrado temporalmente', closes:'cierra a las', opens:'abre a las', opensDay:'abre', soon:'cierra pronto', go:'Pedir', modes:['Entrega','Para llevar'], note:'Serás redirigido a nuestro servicio de pedidos online', days:['dom.','lun.','mar.','mié.','jue.','vie.','sáb.'] },
+    de: { kicker:'Online bestellen', title:'Welches Restaurant?', open:'Geöffnet', closed:'Geschlossen', tempClosed:'Vorübergehend geschlossen', closes:'schließt um', opens:'öffnet um', opensDay:'öffnet', soon:'schließt bald', go:'Bestellen', modes:['Lieferung','Zum Mitnehmen'], note:'Weiterleitung zu unserem Online-Bestellservice', days:['So.','Mo.','Di.','Mi.','Do.','Fr.','Sa.'] }
   };
   function lang() { let l = 'fr'; try { l = localStorage.getItem('mp_lang') || 'fr'; } catch (e) {} return T[l] ? l : 'fr'; }
   function parisNow() {
@@ -276,6 +277,7 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
   function fmtTime(m, l) { const h = Math.floor(m / 60), mm = String(m % 60).padStart(2, '0'); return l === 'fr' ? (h + 'h' + mm) : (String(h).padStart(2, '0') + ':' + mm); }
   function status(resto) {
     const now = parisNow(), l = lang(), t = T[l];
+    if (resto.tempClosed) return { cls:'rstatus-closed', label: t.tempClosed };
     const today = resto.hours[now.wd] || [];
     // Les cuisines ferment 15 min avant l'heure de fermeture → dernière commande = fin − 15 min
     const LAST_ORDER = 15;
@@ -313,6 +315,10 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
     sheet.querySelector('[data-note]').textContent = t.note;
     optsWrap.innerHTML = RESTOS.map(function (r) {
       const st = status(r);
+      if (r.tempClosed) return '<div class="order-opt order-opt--off" aria-disabled="true">' +
+        '<span class="order-opt__info"><span class="order-opt__name">' + esc(r.name) + '</span>' +
+        '<span class="order-opt__sub">' + esc(r.addr) + '</span>' +
+        '<span class="order-opt__status ' + st.cls + '">' + esc(st.label) + '</span></span></div>';
       return '<a class="order-opt" href="' + r.url + '" target="_blank" rel="noopener">' +
         '<span class="order-opt__info"><span class="order-opt__name">' + esc(r.name) + '</span>' +
         '<span class="order-opt__sub">' + esc(r.addr) + '</span>' +
