@@ -10,7 +10,7 @@
       // — Bandeau fermeture temporaire rive gauche —
       "Petit-Quevilly fermé temporairement": "Petit-Quevilly temporarily closed",
       "· On reste ouvert à Rouen centre-ville !": "· We're still open in Rouen city centre!",
-      "Fermé temporairement": "Temporarily closed",
+      "Fermé temporairement": "Temporarily closed", "On fait une pause. Retrouve-nous à Rouen centre-ville !": "We're taking a break. Find us in Rouen city centre!",
       // — Food truck : politique commerciale & formulaire de devis —
       "Le food truck M. Patachon vient régaler vos invités : burgers faits maison, frites fraîches de Normandie et bonne humeur. On arrive, on cuisine sur place, on sert, on range. Vous n'avez plus qu'à profiter.": "The M. Patachon food truck comes to treat your guests: homemade burgers, fresh Normandy fries and good vibes. We arrive, cook on site, serve and clean up. All you have to do is enjoy.",
       "Votre demande": "Your request",
@@ -329,7 +329,7 @@
       // — Bandeau fermeture temporaire rive gauche —
       "Petit-Quevilly fermé temporairement": "Petit-Quevilly cerrado temporalmente",
       "· On reste ouvert à Rouen centre-ville !": "· ¡Seguimos abiertos en el centro de Rouen!",
-      "Fermé temporairement": "Cerrado temporalmente",
+      "Fermé temporairement": "Cerrado temporalmente", "On fait une pause. Retrouve-nous à Rouen centre-ville !": "Hacemos una pausa. ¡Encuéntranos en el centro de Rouen!",
       // — Food truck : politique commerciale & formulaire de devis —
       "Le food truck M. Patachon vient régaler vos invités : burgers faits maison, frites fraîches de Normandie et bonne humeur. On arrive, on cuisine sur place, on sert, on range. Vous n'avez plus qu'à profiter.": "El food truck M. Patachon viene a deleitar a tus invitados: hamburguesas caseras, patatas fritas frescas de Normandía y buen rollo. Llegamos, cocinamos in situ, servimos y recogemos. Tú solo tienes que disfrutar.",
       "Votre demande": "Tu solicitud",
@@ -640,7 +640,7 @@
       // — Bandeau fermeture temporaire rive gauche —
       "Petit-Quevilly fermé temporairement": "Petit-Quevilly vorübergehend geschlossen",
       "· On reste ouvert à Rouen centre-ville !": "· In der Innenstadt von Rouen haben wir weiter geöffnet!",
-      "Fermé temporairement": "Vorübergehend geschlossen",
+      "Fermé temporairement": "Vorübergehend geschlossen", "On fait une pause. Retrouve-nous à Rouen centre-ville !": "Wir machen Pause. Du findest uns in der Innenstadt von Rouen!",
       // — Food truck : politique commerciale & formulaire de devis —
       "Le food truck M. Patachon vient régaler vos invités : burgers faits maison, frites fraîches de Normandie et bonne humeur. On arrive, on cuisine sur place, on sert, on range. Vous n'avez plus qu'à profiter.": "Der M. Patachon Foodtruck verwöhnt eure Gäste: hausgemachte Burger, frische Pommes aus der Normandie und gute Laune. Wir kommen, kochen vor Ort, servieren und räumen auf. Ihr müsst nur noch genießen.",
       "Votre demande": "Eure Anfrage",

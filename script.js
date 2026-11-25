@@ -427,3 +427,38 @@ if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
     });
   });
 })();
+
+
+/* ---- Pop-up fermeture temporaire Petit-Quevilly (1 fois par session) ------
+   Pour l'enlever à la réouverture : supprimer ce bloc (et le CSS .closure-pop). */
+(function () {
+  if (!document.body.classList.contains('has-notice')) return;
+  try { if (sessionStorage.getItem('mp_closure_seen')) return; } catch (e) {}
+  const T = {
+    fr: { k:'Info resto', t:'Petit-Quevilly fait une pause', p:"Notre resto de Petit-Quevilly est fermé temporairement. Bonne nouvelle : on t'attend à Rouen centre-ville, 66 rue de la Vicomté — sur place, à emporter ou en livraison.", a:'Commander au centre-ville', b:'Itinéraire', c:"OK, j'ai compris" },
+    en: { k:'Restaurant info', t:'Petit-Quevilly is taking a break', p:'Our Petit-Quevilly restaurant is temporarily closed. Good news: we are waiting for you in Rouen city centre, 66 rue de la Vicomté — dine in, takeaway or delivery.', a:'Order from city centre', b:'Directions', c:'OK, got it' },
+    es: { k:'Info restaurante', t:'Petit-Quevilly hace una pausa', p:'Nuestro restaurante de Petit-Quevilly está cerrado temporalmente. Buena noticia: te esperamos en el centro de Rouen, 66 rue de la Vicomté — en el local, para llevar o a domicilio.', a:'Pedir en el centro', b:'Cómo llegar', c:'Vale, entendido' },
+    de: { k:'Restaurant-Info', t:'Petit-Quevilly macht Pause', p:'Unser Restaurant in Petit-Quevilly ist vorübergehend geschlossen. Gute Nachricht: Wir erwarten dich in der Innenstadt von Rouen, 66 rue de la Vicomté — vor Ort, zum Mitnehmen oder Lieferung.', a:'In der Innenstadt bestellen', b:'Route', c:'OK, verstanden' }
+  };
+  let l = 'fr'; try { l = localStorage.getItem('mp_lang') || 'fr'; } catch (e) {}
+  const t = T[l] || T.fr;
+  const pop = document.createElement('div');
+  pop.className = 'closure-pop';
+  pop.innerHTML =
+    '<div class="closure-pop__backdrop" data-cp-close></div>' +
+    '<div class="closure-pop__panel" role="dialog" aria-modal="true" aria-labelledby="cpTitle">' +
+    '<button type="button" class="closure-pop__x" data-cp-close aria-label="Fermer">&times;</button>' +
+    '<span class="closure-pop__badge">' + t.k + '</span>' +
+    '<h3 id="cpTitle">' + t.t + '</h3><p>' + t.p + '</p>' +
+    '<div class="closure-pop__btns">' +
+    '<a class="btn btn--marine" href="https://bonne-nouvelle.marketplace.dood.com/fr/shops/street-food/m-patachon-rouen-rive-droite" target="_blank" rel="noopener">' + t.a + ' <span class="arrow">→</span></a>' +
+    '<a class="btn closure-pop__ghost" href="https://share.google/U9talpZV67t7AD55W" target="_blank" rel="noopener">' + t.b + '</a>' +
+    '</div><button type="button" class="closure-pop__ok" data-cp-close>' + t.c + '</button></div>';
+  function close() { pop.classList.remove('is-open'); document.body.style.overflow = ''; try { sessionStorage.setItem('mp_closure_seen', '1'); } catch (e) {} setTimeout(function () { pop.remove(); }, 400); }
+  setTimeout(function () {
+    document.body.appendChild(pop);
+    pop.querySelectorAll('[data-cp-close], .closure-pop__btns a').forEach(function (el) { el.addEventListener('click', close); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    requestAnimationFrame(function () { pop.classList.add('is-open'); });
+  }, 900);
+})();
